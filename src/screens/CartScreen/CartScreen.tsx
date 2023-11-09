@@ -6,13 +6,11 @@ import baselocalization from "../../utils/baselocalization";
 import theme from "../../utils/themes";
 import styles from "./styles";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { images } from "../../utils/images";
 
 
 const CartScreen = (props: any) => {
-    const dispatch = useDispatch();
-    const userId = useSelector((state: any) => state.reducer.currentUser.id);
     const cartItems = useSelector((state: any) => state.reducer.cartItems);
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -21,10 +19,8 @@ const CartScreen = (props: any) => {
     useEffect(() => {
         let count = 0;
         cartItems.forEach(item => {
-          if (item.userId === userId) {
             count = 1;
             setIsEmpty(false);
-          }
         });
         if (count == 0) {
           setIsEmpty(true);
@@ -42,7 +38,7 @@ const CartScreen = (props: any) => {
         setTotalItems(newTotalItems);
         setTotalPrice(newTotalPrice);
     }, [cartItems]);
-
+    
     return !isEmpty ? (
         <View>
             <View style={styles.topView}>
@@ -52,6 +48,7 @@ const CartScreen = (props: any) => {
                 {cartItems.map(item =>
                     <View style={{ margin: 20 }}>
                         <CustomCartElement
+                            testID={"CartScreen_CartProduct"}
                             itemImage={item.image}
                             itemName={item.title}
                             itemPrice={item.price * item.qty}
@@ -77,12 +74,12 @@ const CartScreen = (props: any) => {
                         <Text style={styles.gratisStyle}>
                             {baselocalization.cartScreen.cartScreenGratis}
                         </Text>
-                        <Text style={styles.totalPriceText}>Rs {totalPrice}</Text>
+                        <Text testID= 'CartScreen_TotalPrice' style={styles.totalPriceText}>Rs {totalPrice}</Text>
                     </View>
                 </View>
             </ScrollView>
             <View style={styles.buttonContainer}>
-                <CustomButton text={baselocalization.cartScreen.cartScreenButtonText}
+                <CustomButton testID='CartScreen_NextButton' text={baselocalization.cartScreen.cartScreenButtonText}
                     disabled={false}
                     buttonStylesProps={{
                         backgroundColor: theme.colors.primary,
