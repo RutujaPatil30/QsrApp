@@ -26,6 +26,7 @@ const HomeScreen = (props: any) => {
 
     
     const handleLogout = () => {
+        navigation.navigate('OnboardingScreen'),
         dispatch(logout_request());
     };
 
@@ -58,7 +59,7 @@ const HomeScreen = (props: any) => {
         <ScrollView contentContainerStyle={{ flexGrow: 1, opacity: onDropDownOpen ? 0.2 : 1 }}>
             <View style={styles.topView}>
                 <View style={styles.container}>
-                    <Image source={images?.homescreen_mcdIcon} style={styles.logo} resizeMode={'contain'} />
+                    <Image source={images.homescreen_mcdIcon} style={styles.logo} resizeMode={'contain'} />
                     <Dropdown data={data}
                         style={styles.dropdown}
                         placeholderStyle={styles.placeholderStyle}
