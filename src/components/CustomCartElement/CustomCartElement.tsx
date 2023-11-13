@@ -14,6 +14,7 @@ type CustomCartElementProps = {
   itemPrice: number;
   itemQty: number;
   itemId: number;
+  testID: string;
 };
 
 const CustomCartElement = ({
@@ -22,6 +23,7 @@ const CustomCartElement = ({
   itemPrice,
   itemQty,
   itemId,
+  testID
 }: CustomCartElementProps) => {
   const dispatch = useDispatch();
   const increaseItem = () => {
@@ -50,24 +52,25 @@ const CustomCartElement = ({
     dispatch(delete_cart_item_request( item));
   };
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID = {testID ?? 'CustomCartElement'}>
       <View style={styles.imageContainer}>
         <Image source={itemImage} style={styles.image} resizeMode="contain" />
       </View>
       <View style={styles.viewContainer}>
         <Text style={styles.textHeaderStyle}>{itemName}</Text>
         <View style={styles.viewSubContainer}>
-          <TouchableOpacity style={styles.counterStyle} onPress={decreaseItem}>
+          <TouchableOpacity style={styles.counterStyle} onPress={decreaseItem} testID='DecreaseButton'>
             <Icon name="minus" size={20} color={theme.colors.primary} />
           </TouchableOpacity>
           <Text style={styles.textSubContainer}>{itemQty}</Text>
-          <TouchableOpacity style={styles.counterStyle} onPress={increaseItem}>
+          <TouchableOpacity style={styles.counterStyle} onPress={increaseItem} testID="IncreaseButton">
             <Icon name="plus" size={20} color={theme.colors.primary} />
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.priceContainer}>
         <TouchableOpacity
+          testID='DeleteButton'
           style={{alignItems: 'flex-end', marginBottom: 20}}
           onPress={deleteItem}>
           <Icon

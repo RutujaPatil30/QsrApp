@@ -48,6 +48,7 @@ const CartScreen = (props: any) => {
                 {cartItems.map(item =>
                     <View style={{ margin: 20 }}>
                         <CustomCartElement
+                            testID={"CartScreen_CartProduct"}
                             itemImage={item.image}
                             itemName={item.title}
                             itemPrice={item.price * item.qty}
@@ -78,7 +79,7 @@ const CartScreen = (props: any) => {
                 </View>
             </ScrollView>
             <View style={styles.buttonContainer}>
-                <CustomButton  text={baselocalization.cartScreen.cartScreenButtonText}
+                <CustomButton testID='CartScreen_NextButton' text={baselocalization.cartScreen.cartScreenButtonText}
                     disabled={false}
                     buttonStylesProps={{
                         backgroundColor: theme.colors.primary,

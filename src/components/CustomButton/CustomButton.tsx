@@ -16,16 +16,19 @@ type CustomButtonProps = {
     height?: any;
     fontSize?: number;
   };
+  testID: string;
 }
 
 const CustomButton = ({
   text,
   disabled,
   onPress,
-  buttonStylesProps
+  buttonStylesProps,
+  testID,
 }: CustomButtonProps)=>{
     return(
         <TouchableOpacity
+            testID={testID ?? 'CustomButton'}
             onPress={onPress}
             disabled={disabled}
             style={[styles.container, 

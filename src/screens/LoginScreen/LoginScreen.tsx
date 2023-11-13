@@ -47,10 +47,8 @@ const LoginScreen = (props: any) => {
                 baselocalization.loginScreen.incorrectPassword,
             );
         } else if (userExist && user.password === values.password) {
-            console.log('success');
             navigation.navigate('HomeScreen');
             dispatch(login_request(user));
-            
         } else {
             Alert.alert(baselocalization.loginScreen.checkEmailAndPassword);
         }
@@ -97,6 +95,7 @@ const LoginScreen = (props: any) => {
                                 }) => (
                                     <View>
                                         <CustomTextInput
+                                            testID='LoginScreen_EmailInputField'
                                             value={values.email}
                                             errorText={errors.email}
                                             onChangeText={handleChange('email')}
@@ -106,6 +105,7 @@ const LoginScreen = (props: any) => {
                                             lablePlaceHolder={baselocalization.loginScreen.emailPlaceHolder}
                                         />
                                         <CustomTextInput
+                                            testID='LoginScreen_PasswordInputField'
                                             value={values.password}
                                             errorText={errors.password}
                                             onChangeText={handleChange('password')}
@@ -119,7 +119,7 @@ const LoginScreen = (props: any) => {
                                             isPassword={true}
                                         />
                                         <View style={styles.button}>
-                                            <CustomButton text={baselocalization.onboardingScreen.onboardingScreenButtonText}
+                                            <CustomButton testID='LoginScreen_NextButton' text={baselocalization.onboardingScreen.onboardingScreenButtonText}
                                                 disabled={false}
                                                 buttonStylesProps={{
                                                     backgroundColor: theme.colors.primary,

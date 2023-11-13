@@ -10,6 +10,7 @@ type CustomCategoryElementsProps = {
   itemDescription: string;
   onPressAdd:any;
   onPress?: any;
+  testID:string;
 };
 
 const CustomCategoryElements = ({
@@ -18,10 +19,11 @@ const CustomCategoryElements = ({
   itemPrice,
   itemDescription,
   onPress,
-  onPressAdd
+  onPressAdd,
+  testID
 }: CustomCategoryElementsProps) => {
   return (
-    <TouchableOpacity  onPress={onPress} style={styles.container}>
+    <TouchableOpacity  onPress={onPress} style={styles.container} testID = {testID ?? 'CustomCategoryElements'}>
       <View style={styles.imageContainer}>
         <Image source={itemImage} style={styles.image} resizeMode="contain" />
       </View>
