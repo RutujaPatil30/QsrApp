@@ -41,6 +41,7 @@ const ProductDetailsScreen = (props: any) => {
                         value={text}
                         onChangeText={text => setText(text)}
                         style={styles.textInputStyle}
+                        testID='ProductDetailsScreen_InputField'
                     />
                     </ScrollView>
                 </View>
@@ -55,19 +56,18 @@ const ProductDetailsScreen = (props: any) => {
                         />
                     </TouchableOpacity>
                     <CustomButton text={baselocalization.onboardingScreen.onboardingScreenButtonText}
-                        disabled={false}
-                        buttonStylesProps={{
-                            backgroundColor: theme.colors.primary,
-                            borderColor: theme.colors.primary,
-                            textColor: theme.colors.white,
-                            width: wp('75%'),
-                            height: hp('6%'),
-                            fontSize: theme.fonts.labels
-                        }}
-                        onPress={()=>{navigation.navigate('CartScreen')}}
-                    />
+                    disabled={false}
+                    buttonStylesProps={{
+                        backgroundColor: theme.colors.primary,
+                        borderColor: theme.colors.primary,
+                        textColor: theme.colors.white,
+                        width: wp('75%'),
+                        height: hp('6%'),
+                        fontSize: theme.fonts.labels
+                    }}
+                    onPress={() => { navigation.navigate('CartScreen'); } } testID={"ProductDetailsScreen_NextButton"}                    />
                 </View>
-                <Animatable.View animation="slideInUp" style={styles.animationView}>
+                <Animatable.View testID="ProductDetailsScreen_Animation" animation="slideInUp" style={styles.animationView}>
                     <Image source={route.params.image} style={styles.imageStyles} />
                 </Animatable.View>
             </Animatable.View>

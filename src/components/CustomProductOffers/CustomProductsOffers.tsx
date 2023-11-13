@@ -8,6 +8,7 @@ type CustomProductOffersProps = {
     itemName: string;
     itemPrice: number;
     onPress?: any;
+    testID : string
 };
 
 const CustomProductOffers = ({
@@ -15,9 +16,10 @@ const CustomProductOffers = ({
     itemName,
     itemPrice,
     onPress,
+    testID,
 }: CustomProductOffersProps) => {
     return (
-            <View style={styles.container}>
+            <View style={styles.container} testID = {testID ?? 'CustomProductOffers'}>
                 <View style={styles.fixedHeightContainer}>
                     <Image source={itemImage} style={styles.image} />
                     <View style={styles.textContainer}>
@@ -27,11 +29,10 @@ const CustomProductOffers = ({
                     <View style={styles.buttonContainer}>
                         <View style={{ top: 12 }}>
                             <CustomIconButton
-                                iconName="plus"
-                                text="Tambah"
-                                disabled={false}
-                                onPress={onPress}
-                            />
+                            iconName="plus"
+                            text="Tambah"
+                            disabled={false}
+                            onPress={onPress} testID={'CustomIconButton'}                            />
                         </View>
                     </View>
                 </View>

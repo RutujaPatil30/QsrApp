@@ -60,7 +60,7 @@ const HomeScreen = (props: any) => {
             <View style={styles.topView}>
                 <View style={styles.container}>
                     <Image source={images.homescreen_mcdIcon} style={styles.logo} resizeMode={'contain'} />
-                    <Dropdown data={data}
+                    <Dropdown testID="HomeScreen_LocationDropdown" data={data}
                         style={styles.dropdown}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.placeholderStyle}
@@ -95,6 +95,7 @@ const HomeScreen = (props: any) => {
                 </View>
                 <View style={styles.searchbarContainer}>
                     <Searchbar
+                        testID="HomeScreen_ProductSearchbar"
                         placeholder={baselocalization.homeScreen.homeScreenSearch}
                         placeholderTextColor={theme.colors.grey}
                         onChangeText={text => {
@@ -107,6 +108,7 @@ const HomeScreen = (props: any) => {
                 </View>
                 <View style={styles.carouselContainer}>
                     <Carousel
+                        testID="HomeScreen_Carousel"
                         loop
                         width={wp('90%')}
                         height={wp('60%')}
@@ -136,6 +138,7 @@ const HomeScreen = (props: any) => {
                     data={filteredCategories}
                     renderItem={({ item }) => (
                         <CustomCategory
+                            testID="HomeScreen_ProductCategory"
                             itemImage={item.image}
                             itemTitle={item.title}
                             onPress={() => {
@@ -157,6 +160,7 @@ const HomeScreen = (props: any) => {
                     renderItem={({ item }) => (
                         <View style ={{padding:10}} >
                             <CustomProductOffers 
+                                testID="HomeScreen_ProductOffers"
                                 itemImage={item.image}
                                 itemName={item.title}
                                 itemPrice={item.price}

@@ -17,6 +17,7 @@ interface CustomTextInputProps {
   onBlur?: () => void;
   secureTextEntry?: boolean;
   isPassword?: boolean;
+  testID : string;
 }
 
 const CustomTextInput: React.FC<CustomTextInputProps> = props => {
@@ -30,7 +31,7 @@ const CustomTextInput: React.FC<CustomTextInputProps> = props => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container}  testID={props.testID ?? 'CustomTextInput'}>
       {props.labelText ? (
         <Text style={styles.labelText}>{props.labelText}</Text>
       ) : null}

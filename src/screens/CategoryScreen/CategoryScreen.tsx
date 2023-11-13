@@ -6,7 +6,7 @@ import {add_to_cart_request} from '../../redux/action'
 import {styles} from './styles';
 import ProductDetails from '../../utils/productDetails'
 
-const CategoryPage = (props: any) => {
+const CategoryScreen = (props: any) => {
   const {navigation, route} = props;
 
   const dispatch = useDispatch();
@@ -24,6 +24,7 @@ const CategoryPage = (props: any) => {
         renderItem={({item}) => (
           <View style={styles.flatlistContainer}>
             <CustomCategoryElements
+              testID='CategoryScreen_Elements'
               itemImage={item.image}
               itemName={item.title}
               itemDescription={item.description}
@@ -49,4 +50,4 @@ const CategoryPage = (props: any) => {
   );
 };
 
-export default CategoryPage;
+export default CategoryScreen;

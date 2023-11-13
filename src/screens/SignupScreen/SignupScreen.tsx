@@ -22,13 +22,10 @@ import { styles } from './styles';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { images } from '../../utils/images';
 
-
 const SignupScreen = (props: any) => {
   const dispatch = useDispatch();
   const users = useSelector((state: any) => state.reducer.users);
   const {navigation} = props;
-
-  
 
   const initialValues = {
     name: '',
@@ -72,6 +69,7 @@ const SignupScreen = (props: any) => {
 
   return (
     <ScrollView
+      testID='SignupScreen'
       keyboardDismissMode="interactive"
       showsVerticalScrollIndicator={false}
       keyboardShouldPersistTaps="handled"
@@ -112,6 +110,7 @@ const SignupScreen = (props: any) => {
                 }) => (
                   <View>
                     <CustomTextInput
+                      testID='SignupScreen_NameInputField'
                       value={values.name}
                       errorText={errors.name}
                       onChangeText={handleChange('name')}
@@ -121,6 +120,7 @@ const SignupScreen = (props: any) => {
                       lablePlaceHolder={baselocalization.signupScreen.namePlaceHolder}
                     />
                     <CustomTextInput
+                      testID='SignupScreen_EmailInputField'
                       value={values.email}
                       errorText={errors.email}
                       onChangeText={handleChange('email')}
@@ -130,6 +130,7 @@ const SignupScreen = (props: any) => {
                       lablePlaceHolder={baselocalization.loginScreen.emailPlaceHolder}
                     />
                     <CustomTextInput
+                      testID='SignupScreen_PhoneInputField'
                       value={values.phoneNumber}
                       errorText={errors.phoneNumber}
                       onChangeText={handleChange('phoneNumber')}
@@ -143,6 +144,7 @@ const SignupScreen = (props: any) => {
                       lablePlaceHolder={baselocalization.signupScreen.phonePlaceHolder}
                     />
                     <CustomTextInput
+                      testID='SignupScreen_PasswordInputField'
                       value={values.password}
                       errorText={errors.password}
                       onChangeText={handleChange('password')}
@@ -156,6 +158,7 @@ const SignupScreen = (props: any) => {
                       isPassword={true}
                     />
                     <CustomTextInput
+                      testID='SignupScreen_ConfirmPasswordFiels'
                       value={values.confirmPassword}
                       errorText={errors.confirmPassword}
                       onChangeText={handleChange('confirmPassword')}
@@ -171,7 +174,7 @@ const SignupScreen = (props: any) => {
                       isPassword={true}
                     />                
                     <View style={styles.btn}>
-                    <CustomButton text={baselocalization.onboardingScreen.onboardingScreenButtonText}
+                    <CustomButton testID='SignuScreen_NextButton' text={baselocalization.onboardingScreen.onboardingScreenButtonText}
                             disabled={false}
                             buttonStylesProps={{
                                 backgroundColor: theme.colors.primary,

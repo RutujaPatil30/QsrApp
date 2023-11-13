@@ -53,6 +53,7 @@ const SpecialOffersScreen= (props:any) => {
         renderItem={({item}) => (
           <View style={styles.flatListItem}>
             <CustomProductOffers
+              testID='SpecialOffersScreen_Products'
               itemImage={item.image}
               itemName={item.title}
               itemPrice={item.price}

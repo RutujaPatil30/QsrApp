@@ -13,6 +13,7 @@ type CustomIconButtonProps = {
   borderColor?: string;
   textColor?: string;
   width?: DimensionValue;
+  testID: string;
 };
 
 const CustomIconButton = ({
@@ -24,9 +25,11 @@ const CustomIconButton = ({
   borderColor,
   textColor,
   width,
+  testID
 }: CustomIconButtonProps) => {
   return (
     <TouchableOpacity
+      testID={testID ?? 'CustomIconButton'}
       onPress={onPress}
       disabled={disabled}
       style={[

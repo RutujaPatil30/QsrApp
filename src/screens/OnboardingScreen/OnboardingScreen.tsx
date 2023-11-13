@@ -17,7 +17,7 @@ const OnboardingScreen = ( props:any ) =>{
             <Text style = {styles.title}>{baselocalization.onboardingScreen.onboardingScreenTitle}</Text>
             <Text style={styles.subtitle}>{baselocalization.onboardingScreen.onboardingScreenSubtitle}</Text>
             <View style = {styles.buttonContainer}>
-                <CustomButton text={baselocalization.onboardingScreen.onboardingScreenButtonText} 
+                <CustomButton   testID='OnboardingScreen_NextButton' text={baselocalization.onboardingScreen.onboardingScreenButtonText} 
                     disabled={false}
                     buttonStylesProps={{
                         backgroundColor: theme.colors.secondary,
