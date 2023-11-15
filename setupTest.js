@@ -6,13 +6,6 @@ jest.mock('@react-native-async-storage/async-storage', () =>
   require('@react-native-async-storage/async-storage/jest/async-storage-mock')
 );
 
-jest.mock('react-native-reanimated', () => {
-  const Reanimated = require('react-native-reanimated/mock');
-
-  Reanimated.default.call = () => { };
-  return Reanimated;
-});
-
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 jest.mock('react-native-animatable', () => {
@@ -49,4 +42,42 @@ jest.mock('react-native', () => {
   return RealComponent;
 });
 
+jest.mock('@react-navigation/native', () => {
+  return {
+    ...jest.requireActual('@react-navigation/native'),
+    useNavigation: () => ({
+      navigate: jest.fn(),
+      goBack: jest.fn(),
+    }),
+  };
+})
+
+
+/* eslint-disable global-require */
+
+jest.mock('@react-native-async-storage/async-storage', () =>
+  require('@react-native-async-storage/async-storage/jest/async-storage-mock')
+);
+
+const globalAny = global;
+
+globalAny.XMLHttpRequest = jest.fn();
+globalAny.fetch = jest.fn();
+globalAny.window = globalAny;
+globalAny.window.navigator = {};
+globalAny.__reanimatedWorkletInit = jest.fn();
+
+jest.mock('react-native/Libraries/LogBox/LogBox');
+jest.mock(
+  'react-native/Libraries/EventEmitter/NativeEventEmitter',
+);
+
+jest.mock('react-native-reanimated', () => {
+  const Reanimated = require('react-native-reanimated/mock');
+
+  Reanimated.default.call = () => { /* no-op */ };
+  return Reanimated;
+});
+
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
