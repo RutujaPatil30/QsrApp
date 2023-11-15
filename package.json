@@ -81,7 +81,6 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect",
       "<rootDir>/setupTest.js",
-      "<rootDir>/src/Testhelpers/jestSetup.tsx",
       "<rootDir>/src/Testhelpers/asyncStorageMock.js"
     ],
     "transformIgnorePatterns": [
