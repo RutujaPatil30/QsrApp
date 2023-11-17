@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checking ProductDetailsScreen  should render the UI "ProductDetailsScreen"  1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#da291c",
+      "flex": 1,
+    }
+  }
+>
+  <AnimatableView
+    animation="fadeIn"
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "flex": 1,
+          "paddingTop": 120,
+        }
+      }
+    >
+      <RCTScrollView
+        collapsable={false}
+        handlerTag={2}
+        handlerType="NativeViewGestureHandler"
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        style={
+          {
+            "backgroundColor": "#ffffff",
+            "borderTopLeftRadius": 66.5,
+            "borderTopRightRadius": 66.5,
+            "padding": 33.5,
+            "top": 320,
+          }
+        }
+        waitFor={
+          [
+            {
+              "current": null,
+            },
+          ]
+        }
+      >
+        <View>
+          <Text
+            style={
+              {
+                "color": "#000000",
+                "fontSize": 22,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Big Mac
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ffc72c",
+                "fontSize": 20,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Rs. 
+            5.99
+          </Text>
+          <Text
+            style={
+              {
+                "fontSize": 15,
+                "paddingVertical": 20,
+              }
+            }
+          >
+            A big, tasty burger with two beef patties and special sauce.
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#000000",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Tambahkan Catatan
+            </Text>
+            <Text
+              style={
+                {
+                  "fontSize": 15,
+                  "fontWeight": "bold",
+                  "marginLeft": 6.5,
+                }
+              }
+            >
+              (Optional)
+            </Text>
+          </View>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="Cth. Tanpa keju dan tomat"
+            placeholderTextColor="#808080"
+            style={
+              {
+                "alignSelf": "center",
+                "backgroundColor": "#e2e2e2",
+                "borderRadius": 20,
+                "marginVertical": 33.5,
+                "padding": 20,
+                "width": 675,
+              }
+            }
+            testID="ProductDetailsScreen_InputField"
+            value=""
+          />
+        </View>
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "padding": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#da291c",
+            "borderRadius": 112.5,
+            "height": 76,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 97.5,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": "#ffffff",
+                "fontSize": 25,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰐕
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#da291c",
+            "borderColor": "#da291c",
+            "borderRadius": 53.5,
+            "borderWidth": 1,
+            "height": 80,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 562.5,
+          }
+        }
+        testID="ProductDetailsScreen_NextButton"
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontSize": 18,
+                "fontWeight": "bold",
+              },
+              {
+                "color": "#ffffff",
+              },
+            ]
+          }
+        >
+          Pesan Sekarang
+        </Text>
+      </View>
+    </View>
+    <AnimatableView
+      animation="slideInUp"
+      style={
+        {
+          "alignItems": "center",
+          "left": 6,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+      testID="ProductDetailsScreen_Animation"
+    >
+      <RCTImageView
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        internal_analyticTag={null}
+        resizeMode="contain"
+        source={
+          [
+            {
+              "height": undefined,
+              "uri": undefined,
+              "width": undefined,
+            },
+          ]
+        }
+        style={
+          {
+            "height": 400,
+            "overflow": "hidden",
+            "resizeMode": "contain",
+            "top": 106.5,
+            "width": 533.5,
+          }
+        }
+      />
+    </AnimatableView>
+  </AnimatableView>
+</View>
+`;

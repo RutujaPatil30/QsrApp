@@ -35,6 +35,10 @@ describe('Checking ProductDetailsScreen ', () => {
     );
     render(component);
 
+    const tree = renderer.create(component).toJSON();
+
+    expect(tree).toMatchSnapshot();
+
     const inputField = screen.getByTestId('ProductDetailsScreen_InputField');
     const nextButton = screen.getByTestId('ProductDetailsScreen_NextButton');
     const productAnimation = screen.getByTestId('ProductDetailsScreen_Animation');
@@ -44,15 +48,5 @@ describe('Checking ProductDetailsScreen ', () => {
     expect(productAnimation).toBeTruthy();
 
   });
-});
 
-describe('ProductDetailsScreen Snapshot Test', () => {
-  it('renders correctly', () => {
-      const tree = renderer.create(
-          <Provider store={store}>
-              <ProductDetailsScreen />
-          </Provider>
-      ).toJSON();
-      expect(tree).toMatchSnapshot();
-  });
 });
