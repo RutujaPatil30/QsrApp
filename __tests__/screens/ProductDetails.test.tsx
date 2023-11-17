@@ -5,6 +5,7 @@ import ProductDetailsScreen from '../../src/screens/ProductDetailsScreen/Product
 import { NavigationContainer} from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import store from '../../src/redux/store';
+import renderer from 'react-test-renderer';
 
 describe('Checking ProductDetailsScreen ', () => {
   it('should render the UI "ProductDetailsScreen" ', () => {
@@ -45,5 +46,13 @@ describe('Checking ProductDetailsScreen ', () => {
   });
 });
 
-
-
+describe('ProductDetailsScreen Snapshot Test', () => {
+  it('renders correctly', () => {
+      const tree = renderer.create(
+          <Provider store={store}>
+              <ProductDetailsScreen />
+          </Provider>
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
+  });
+});

@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingScreen Snapshot Test renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#da291c",
+      "flex": 1,
+      "paddingHorizontal": 37.5,
+      "paddingVertical": 66.5,
+    }
+  }
+>
+  <RCTImageView
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    internal_analyticTag={null}
+    resizeMode="contain"
+    source={
+      [
+        {
+          "height": undefined,
+          "uri": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    style={
+      {
+        "height": 200,
+        "overflow": "hidden",
+        "width": 225,
+      }
+    }
+  />
+  <RCTImageView
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    internal_analyticTag={null}
+    resizeMode="contain"
+    source={
+      [
+        {
+          "height": undefined,
+          "uri": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    style={
+      {
+        "height": 533.5,
+        "marginTop": 40,
+        "overflow": "hidden",
+        "width": 600,
+      }
+    }
+  />
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontSize": 22,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Selamat Datang di McDonald
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontSize": 15,
+        "marginTop": 40,
+        "textAlign": "center",
+      }
+    }
+  >
+    Makin hemat dan praktis peran lewat aplikasi, banyak menu, banyak promo, nggakperlu keluar rumah!
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "flex-end",
+        "marginBottom": 26.5,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffc72c",
+          "borderColor": "#ffc72c",
+          "borderRadius": 53.5,
+          "borderWidth": 1,
+          "height": 66.5,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 600,
+        }
+      }
+      testID="OnboardingScreen_NextButton"
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontSize": 18,
+              "fontWeight": "bold",
+            },
+            {
+              "color": "#da291c",
+            },
+          ]
+        }
+      >
+        Pesan Sekarang
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

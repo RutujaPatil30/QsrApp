@@ -4,6 +4,7 @@ import CartScreen from '../../src/Screens/CartScreen/CartScreen';
 import '@testing-library/jest-native/extend-expect';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
 
 const mockStore = configureStore([]);
 
@@ -62,4 +63,15 @@ describe('Checking Cart Screen', () => {
         expect(totalPriceText.props.children.join('')).toBe('Rs 25');
     });
 
+});
+
+describe('CartScreen Snapshot Test', () => {
+    it('renders correctly', () => {
+        const tree = renderer.create(
+            <Provider store={store}>
+                <CartScreen />
+            </Provider>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });
