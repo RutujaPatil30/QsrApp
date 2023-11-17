@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react-native';
 import HomeScreen from '../../src/Screens/HomeScreen/HomeScreen';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
 
 const mockStore = configureStore([]);
 const store = mockStore({
@@ -27,5 +28,16 @@ describe('Checking Home Screen', () => {
     expect(carousel).toBeTruthy();
     expect(productCategories).toHaveLength(4);
     expect(productOffers.length).toBeGreaterThan(0);
+  });
+});
+
+describe('HomeScreen Snapshot Test', () => {
+  it('renders correctly', () => {
+      const tree = renderer.create(
+          <Provider store={store}>
+              <HomeScreen />
+          </Provider>
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
   });
 });

@@ -3,6 +3,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import SignupScreen from '../../src/screens/SignupScreen/SignupScreen';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import renderer from 'react-test-renderer';
 
 const mockStore = configureStore([]);
 let store;
@@ -47,9 +48,16 @@ describe('SignupScreen', () => {
     fireEvent.changeText(getByTestId('SignupScreen_ConfirmPasswordFiels'), 'password123');
 
     fireEvent.press(getByTestId('SignuScreen_NextButton'));
+  });
+});
 
-    // Add your assertions here
-    // For example, you can check if the navigation function was called
-    // or if the correct action was dispatched to the store
+describe('SignupScreen Snapshot Test', () => {
+  it('renders correctly', () => {
+      const tree = renderer.create(
+          <Provider store={store}>
+              <SignupScreen />
+          </Provider>
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
   });
 });

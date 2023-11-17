@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react-native';
 import CategoryScreen from '../../src/Screens/CategoryScreen/CategoryScreen';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
 
 const mockStore = configureStore([]);
 const store = mockStore({
@@ -30,4 +31,15 @@ describe('Checking Category Screen ', () => {
       
         expect(categoryElements.length).toBeGreaterThan(0);
       });
+});
+
+describe('CategoryScreen Snapshot Test', () => {
+  it('renders correctly', () => {
+      const tree = renderer.create(
+          <Provider store={store}>
+              <CategoryScreen />
+          </Provider>
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
+  });
 });

@@ -1,0 +1,2149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen Snapshot Test renders correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    {
+      "flexGrow": 1,
+      "opacity": 1,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        {
+          "backgroundColor": "#da291c",
+          "flexDirection": "column",
+          "height": 400,
+          "padding": 26.5,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <RCTImageView
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          internal_analyticTag={null}
+          resizeMode="contain"
+          source={
+            [
+              {
+                "height": undefined,
+                "uri": undefined,
+                "width": undefined,
+              },
+            ]
+          }
+          style={
+            {
+              "height": 53.5,
+              "overflow": "hidden",
+              "width": 75,
+            }
+          }
+        />
+        <View
+          onLayout={[Function]}
+          style={
+            {
+              "alignSelf": "flex-start",
+              "justifyContent": "center",
+              "marginHorizontal": 75,
+              "width": 375,
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessible={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 35,
+                "justifyContent": "space-between",
+              }
+            }
+            testID="HomeScreen_LocationDropdown"
+          >
+            <Text
+              style={
+                [
+                  {
+                    "flex": 1,
+                    "fontSize": 16,
+                    "writingDirection": "ltr",
+                  },
+                  {
+                    "color": "#ffffff",
+                    "fontSize": 17,
+                    "textAlign": "center",
+                  },
+                  {},
+                ]
+              }
+            >
+              Select location
+            </Text>
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": "#ffffff",
+                    "fontSize": 20,
+                  },
+                  undefined,
+                  {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+            >
+              󰅀
+            </Text>
+          </View>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignSelf": "center",
+              "marginLeft": 37.5,
+              "opacity": 1,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": "#ffffff",
+                  "fontSize": 26,
+                },
+                undefined,
+                {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            󰍃
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "padding": 26.5,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "backgroundColor": "rgb(238, 232, 244)",
+              "borderRadius": 15,
+              "shadowColor": "#000",
+              "shadowOffset": {
+                "height": 0,
+                "width": 0,
+              },
+              "shadowOpacity": 0,
+              "shadowRadius": 0,
+              "width": 637.5,
+            }
+          }
+          testID="HomeScreen_ProductSearchbar-container-outer-layer"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "rgb(238, 232, 244)",
+                "borderRadius": 15,
+                "flex": undefined,
+                "flexDirection": "row",
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 0,
+                  "width": 0,
+                },
+                "shadowOpacity": 0,
+                "shadowRadius": 0,
+              }
+            }
+            testID="HomeScreen_ProductSearchbar-container"
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "transparent",
+                  "borderRadius": 20,
+                  "height": 40,
+                  "margin": 6,
+                  "shadowColor": "#000",
+                  "shadowOffset": {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0,
+                  "shadowRadius": 0,
+                  "width": 40,
+                }
+              }
+              testID="HomeScreen_ProductSearchbar-icon-container-outer-layer"
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgba(121, 116, 126, 1)",
+                    "borderRadius": 20,
+                    "borderWidth": 0,
+                    "elevation": 0,
+                    "flex": 1,
+                    "overflow": "hidden",
+                    "shadowColor": "#000",
+                    "shadowOffset": {
+                      "height": 0,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0,
+                    "shadowRadius": 0,
+                  }
+                }
+                testID="HomeScreen_ProductSearchbar-icon-container"
+              >
+                <View
+                  accessibilityComponentType="button"
+                  accessibilityLabel="search"
+                  accessibilityRole="button"
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": true,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityTraits="button"
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  centered={true}
+                  collapsable={false}
+                  focusable={true}
+                  hitSlop={
+                    {
+                      "bottom": 6,
+                      "left": 6,
+                      "right": 6,
+                      "top": 6,
+                    }
+                  }
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    [
+                      {
+                        "overflow": "hidden",
+                      },
+                      [
+                        {
+                          "alignItems": "center",
+                          "flexGrow": 1,
+                          "justifyContent": "center",
+                        },
+                        {
+                          "borderRadius": 20,
+                        },
+                      ],
+                    ]
+                  }
+                  testID="HomeScreen_ProductSearchbar-icon"
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    allowFontScaling={false}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    selectable={false}
+                    style={
+                      [
+                        {
+                          "color": "rgba(73, 69, 79, 1)",
+                          "fontSize": 24,
+                        },
+                        [
+                          {
+                            "lineHeight": 24,
+                            "transform": [
+                              {
+                                "scaleX": 1,
+                              },
+                            ],
+                          },
+                          {
+                            "backgroundColor": "transparent",
+                          },
+                        ],
+                        {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        {},
+                      ]
+                    }
+                  >
+                    󰍉
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <TextInput
+              accessibilityRole="search"
+              keyboardAppearance="light"
+              onChangeText={[Function]}
+              placeholder="Search"
+              placeholderTextColor="#808080"
+              returnKeyType="search"
+              selectionColor="rgba(103, 80, 164, 1)"
+              style={
+                [
+                  {
+                    "alignSelf": "stretch",
+                    "flex": 1,
+                    "fontSize": 18,
+                    "minWidth": 0,
+                    "paddingLeft": 8,
+                    "textAlign": "left",
+                  },
+                  {
+                    "color": "rgba(73, 69, 79, 1)",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "letterSpacing": 0.15,
+                    "lineHeight": 0,
+                  },
+                  {
+                    "minHeight": 56,
+                    "paddingLeft": 0,
+                  },
+                  undefined,
+                ]
+              }
+              testID="HomeScreen_ProductSearchbar"
+              underlineColorAndroid="transparent"
+              value=""
+            />
+            <View
+              pointerEvents="none"
+              style={
+                [
+                  {
+                    "marginLeft": 16,
+                    "position": "absolute",
+                    "right": 0,
+                  },
+                  false,
+                ]
+              }
+              testID="HomeScreen_ProductSearchbar-icon-wrapper"
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 20,
+                    "height": 40,
+                    "margin": 6,
+                    "shadowColor": "#000",
+                    "shadowOffset": {
+                      "height": 0,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0,
+                    "shadowRadius": 0,
+                    "width": 40,
+                  }
+                }
+                testID="HomeScreen_ProductSearchbar-clear-icon-container-outer-layer"
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "transparent",
+                      "borderColor": "rgba(121, 116, 126, 1)",
+                      "borderRadius": 20,
+                      "borderWidth": 0,
+                      "elevation": 0,
+                      "flex": 1,
+                      "overflow": "hidden",
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "height": 0,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0,
+                      "shadowRadius": 0,
+                    }
+                  }
+                  testID="HomeScreen_ProductSearchbar-clear-icon-container"
+                >
+                  <View
+                    accessibilityComponentType="button"
+                    accessibilityLabel="clear"
+                    accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": false,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityTraits="button"
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    centered={true}
+                    collapsable={false}
+                    focusable={true}
+                    hitSlop={
+                      {
+                        "bottom": 6,
+                        "left": 6,
+                        "right": 6,
+                        "top": 6,
+                      }
+                    }
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      [
+                        {
+                          "overflow": "hidden",
+                        },
+                        [
+                          {
+                            "alignItems": "center",
+                            "flexGrow": 1,
+                            "justifyContent": "center",
+                          },
+                          {
+                            "borderRadius": 20,
+                          },
+                        ],
+                      ]
+                    }
+                    testID="HomeScreen_ProductSearchbar-clear-icon"
+                  >
+                    <Text
+                      accessibilityElementsHidden={true}
+                      allowFontScaling={false}
+                      importantForAccessibility="no-hide-descendants"
+                      pointerEvents="none"
+                      selectable={false}
+                      style={
+                        [
+                          {
+                            "color": "rgba(255, 255, 255, 0)",
+                            "fontSize": 24,
+                          },
+                          [
+                            {
+                              "lineHeight": 24,
+                              "transform": [
+                                {
+                                  "scaleX": 1,
+                                },
+                              ],
+                            },
+                            {
+                              "backgroundColor": "transparent",
+                            },
+                          ],
+                          {
+                            "fontFamily": "Material Design Icons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          {},
+                        ]
+                      }
+                    >
+                      󰅖
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "alignSelf": "center",
+            "position": "absolute",
+            "top": 200,
+          }
+        }
+      >
+        <View>
+          <View
+            collapsable={false}
+            handlerTag={2}
+            handlerType="PanGestureHandler"
+            onGestureHandlerEvent={[Function]}
+            onGestureHandlerStateChange={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              [
+                {
+                  "overflow": "hidden",
+                },
+                {
+                  "height": 450,
+                  "width": 675,
+                },
+                {},
+                {
+                  "flexDirection": "row",
+                },
+              ]
+            }
+            testID="HomeScreen_Carousel"
+          >
+            <View
+              style={
+                [
+                  {
+                    "height": 450,
+                    "position": "absolute",
+                    "width": 675,
+                  },
+                  {
+                    "transform": [
+                      {
+                        "translateX": undefined,
+                      },
+                      {
+                        "scale": undefined,
+                      },
+                    ],
+                    "zIndex": undefined,
+                  },
+                ]
+              }
+              testID="__CAROUSEL_ITEM_0_NOT_READY__"
+            />
+            <View
+              style={
+                [
+                  {
+                    "height": 450,
+                    "position": "absolute",
+                    "width": 675,
+                  },
+                  {
+                    "transform": [
+                      {
+                        "translateX": undefined,
+                      },
+                      {
+                        "scale": undefined,
+                      },
+                    ],
+                    "zIndex": undefined,
+                  },
+                ]
+              }
+              testID="__CAROUSEL_ITEM_1_NOT_READY__"
+            />
+            <View
+              style={
+                [
+                  {
+                    "height": 450,
+                    "position": "absolute",
+                    "width": 675,
+                  },
+                  {
+                    "transform": [
+                      {
+                        "translateX": undefined,
+                      },
+                      {
+                        "scale": undefined,
+                      },
+                    ],
+                    "zIndex": undefined,
+                  },
+                ]
+              }
+              testID="__CAROUSEL_ITEM_2_NOT_READY__"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "padding": 26.5,
+          "top": 106.5,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#000000",
+            "fontSize": 18,
+            "fontWeight": "bold",
+            "marginVertical": 37.5,
+          }
+        }
+      >
+        Kategori
+      </Text>
+      <RCTScrollView
+        data={
+          [
+            {
+              "id": 1,
+              "image": "test-file-stub",
+              "title": "Breakfast",
+            },
+            {
+              "id": 2,
+              "image": "test-file-stub",
+              "title": "Drinks",
+            },
+            {
+              "id": 3,
+              "image": "test-file-stub",
+              "title": "Desserts",
+            },
+            {
+              "id": 4,
+              "image": "test-file-stub",
+              "title": "Sides",
+            },
+          ]
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={true}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        showsHorizontalScrollIndicator={false}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
+      >
+        <View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#e2e2e2",
+                  "borderRadius": 15,
+                  "marginRight": 15,
+                  "opacity": 1,
+                  "padding": 15,
+                }
+              }
+              testID="HomeScreen_ProductCategory"
+            >
+              <RCTImageView
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                internal_analyticTag={null}
+                resizeMode="contain"
+                source={
+                  [
+                    {
+                      "height": undefined,
+                      "uri": undefined,
+                      "width": undefined,
+                    },
+                  ]
+                }
+                style={
+                  {
+                    "height": 133.5,
+                    "overflow": "hidden",
+                    "resizeMode": "contain",
+                    "width": 187.5,
+                  }
+                }
+              />
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                  }
+                }
+              >
+                Breakfast
+              </Text>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#e2e2e2",
+                  "borderRadius": 15,
+                  "marginRight": 15,
+                  "opacity": 1,
+                  "padding": 15,
+                }
+              }
+              testID="HomeScreen_ProductCategory"
+            >
+              <RCTImageView
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                internal_analyticTag={null}
+                resizeMode="contain"
+                source={
+                  [
+                    {
+                      "height": undefined,
+                      "uri": undefined,
+                      "width": undefined,
+                    },
+                  ]
+                }
+                style={
+                  {
+                    "height": 133.5,
+                    "overflow": "hidden",
+                    "resizeMode": "contain",
+                    "width": 187.5,
+                  }
+                }
+              />
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                  }
+                }
+              >
+                Drinks
+              </Text>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#e2e2e2",
+                  "borderRadius": 15,
+                  "marginRight": 15,
+                  "opacity": 1,
+                  "padding": 15,
+                }
+              }
+              testID="HomeScreen_ProductCategory"
+            >
+              <RCTImageView
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                internal_analyticTag={null}
+                resizeMode="contain"
+                source={
+                  [
+                    {
+                      "height": undefined,
+                      "uri": undefined,
+                      "width": undefined,
+                    },
+                  ]
+                }
+                style={
+                  {
+                    "height": 133.5,
+                    "overflow": "hidden",
+                    "resizeMode": "contain",
+                    "width": 187.5,
+                  }
+                }
+              />
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                  }
+                }
+              >
+                Desserts
+              </Text>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#e2e2e2",
+                  "borderRadius": 15,
+                  "marginRight": 15,
+                  "opacity": 1,
+                  "padding": 15,
+                }
+              }
+              testID="HomeScreen_ProductCategory"
+            >
+              <RCTImageView
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                internal_analyticTag={null}
+                resizeMode="contain"
+                source={
+                  [
+                    {
+                      "height": undefined,
+                      "uri": undefined,
+                      "width": undefined,
+                    },
+                  ]
+                }
+                style={
+                  {
+                    "height": 133.5,
+                    "overflow": "hidden",
+                    "resizeMode": "contain",
+                    "width": 187.5,
+                  }
+                }
+              />
+              <Text
+                style={
+                  {
+                    "color": "#000000",
+                  }
+                }
+              >
+                Sides
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "padding": 26.5,
+          "top": 93.5,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#000000",
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Special Offers
+      </Text>
+      <Text
+        onPress={[Function]}
+        style={
+          {
+            "color": "#da291c",
+            "fontSize": 15,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Lihat Semua &gt;
+         
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "padding": 16,
+          "top": 30,
+        }
+      }
+    >
+      <RCTScrollView
+        data={
+          [
+            {
+              "id": 17,
+              "image": "test-file-stub",
+              "price": 108,
+              "qty": 0,
+              "title": "Big Mac Beef Rasher",
+            },
+            {
+              "id": 18,
+              "image": "test-file-stub",
+              "price": 250,
+              "qty": 0,
+              "title": "Happy Meal 4 pcs McNuggets",
+            },
+            {
+              "id": 19,
+              "image": "test-file-stub",
+              "price": 390,
+              "qty": 0,
+              "title": "Double Cheese McFlavor fries",
+            },
+            {
+              "id": 20,
+              "image": "test-file-stub",
+              "price": 280,
+              "qty": 0,
+              "title": "Triple Burger with Cheese",
+            },
+          ]
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={true}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        showsHorizontalScrollIndicator={false}
+        stickyHeaderIndices={[]}
+        viewabilityConfigCallbackPairs={[]}
+      >
+        <View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "padding": 10,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flex": 1,
+                    "height": 467,
+                  }
+                }
+                testID="HomeScreen_ProductOffers"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 40,
+                      "elevation": 3,
+                      "height": 400,
+                      "justifyContent": "center",
+                      "width": 270,
+                    }
+                  }
+                >
+                  <RCTImageView
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    internal_analyticTag={null}
+                    resizeMode="contain"
+                    source={
+                      [
+                        {
+                          "height": undefined,
+                          "uri": undefined,
+                          "width": undefined,
+                        },
+                      ]
+                    }
+                    style={
+                      {
+                        "height": 160,
+                        "overflow": "hidden",
+                        "resizeMode": "contain",
+                        "width": 262.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "padding": 20,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#000000",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Big Mac Beef Rasher
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#ffc72c",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Rs 
+                      108
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": "50%",
+                        "marginLeft": -86.5,
+                        "position": "absolute",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "top": 12,
+                        }
+                      }
+                    >
+                      <View
+                        accessibilityState={
+                          {
+                            "busy": undefined,
+                            "checked": undefined,
+                            "disabled": false,
+                            "expanded": undefined,
+                            "selected": undefined,
+                          }
+                        }
+                        accessibilityValue={
+                          {
+                            "max": undefined,
+                            "min": undefined,
+                            "now": undefined,
+                            "text": undefined,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          {
+                            "alignItems": "center",
+                            "backgroundColor": "#da291c",
+                            "borderColor": "#da291c",
+                            "borderRadius": 80,
+                            "borderWidth": 1,
+                            "opacity": 1,
+                            "paddingVertical": 10.5,
+                            "width": "100%",
+                          }
+                        }
+                        testID="CustomIconButton"
+                      >
+                        <View
+                          style={
+                            {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "paddingHorizontal": 20,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              {
+                                "alignItems": "center",
+                                "backgroundColor": "#ffffff",
+                                "borderRadius": 66.5,
+                                "justifyContent": "center",
+                              }
+                            }
+                          >
+                            <Text
+                              allowFontScaling={false}
+                              selectable={false}
+                              style={
+                                [
+                                  {
+                                    "color": "#da291c",
+                                    "fontSize": 18,
+                                  },
+                                  undefined,
+                                  {
+                                    "fontFamily": "Material Design Icons",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                  {},
+                                ]
+                              }
+                            >
+                              󰐕
+                            </Text>
+                          </View>
+                          <Text
+                            style={
+                              [
+                                {
+                                  "color": "#000000",
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "marginLeft": 11.5,
+                                },
+                                {
+                                  "color": "#ffffff",
+                                },
+                              ]
+                            }
+                          >
+                            Tambah
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "padding": 10,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flex": 1,
+                    "height": 467,
+                  }
+                }
+                testID="HomeScreen_ProductOffers"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 40,
+                      "elevation": 3,
+                      "height": 400,
+                      "justifyContent": "center",
+                      "width": 270,
+                    }
+                  }
+                >
+                  <RCTImageView
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    internal_analyticTag={null}
+                    resizeMode="contain"
+                    source={
+                      [
+                        {
+                          "height": undefined,
+                          "uri": undefined,
+                          "width": undefined,
+                        },
+                      ]
+                    }
+                    style={
+                      {
+                        "height": 160,
+                        "overflow": "hidden",
+                        "resizeMode": "contain",
+                        "width": 262.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "padding": 20,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#000000",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Happy Meal 4 pcs McNuggets
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#ffc72c",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Rs 
+                      250
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": "50%",
+                        "marginLeft": -86.5,
+                        "position": "absolute",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "top": 12,
+                        }
+                      }
+                    >
+                      <View
+                        accessibilityState={
+                          {
+                            "busy": undefined,
+                            "checked": undefined,
+                            "disabled": false,
+                            "expanded": undefined,
+                            "selected": undefined,
+                          }
+                        }
+                        accessibilityValue={
+                          {
+                            "max": undefined,
+                            "min": undefined,
+                            "now": undefined,
+                            "text": undefined,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          {
+                            "alignItems": "center",
+                            "backgroundColor": "#da291c",
+                            "borderColor": "#da291c",
+                            "borderRadius": 80,
+                            "borderWidth": 1,
+                            "opacity": 1,
+                            "paddingVertical": 10.5,
+                            "width": "100%",
+                          }
+                        }
+                        testID="CustomIconButton"
+                      >
+                        <View
+                          style={
+                            {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "paddingHorizontal": 20,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              {
+                                "alignItems": "center",
+                                "backgroundColor": "#ffffff",
+                                "borderRadius": 66.5,
+                                "justifyContent": "center",
+                              }
+                            }
+                          >
+                            <Text
+                              allowFontScaling={false}
+                              selectable={false}
+                              style={
+                                [
+                                  {
+                                    "color": "#da291c",
+                                    "fontSize": 18,
+                                  },
+                                  undefined,
+                                  {
+                                    "fontFamily": "Material Design Icons",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                  {},
+                                ]
+                              }
+                            >
+                              󰐕
+                            </Text>
+                          </View>
+                          <Text
+                            style={
+                              [
+                                {
+                                  "color": "#000000",
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "marginLeft": 11.5,
+                                },
+                                {
+                                  "color": "#ffffff",
+                                },
+                              ]
+                            }
+                          >
+                            Tambah
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "padding": 10,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flex": 1,
+                    "height": 467,
+                  }
+                }
+                testID="HomeScreen_ProductOffers"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 40,
+                      "elevation": 3,
+                      "height": 400,
+                      "justifyContent": "center",
+                      "width": 270,
+                    }
+                  }
+                >
+                  <RCTImageView
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    internal_analyticTag={null}
+                    resizeMode="contain"
+                    source={
+                      [
+                        {
+                          "height": undefined,
+                          "uri": undefined,
+                          "width": undefined,
+                        },
+                      ]
+                    }
+                    style={
+                      {
+                        "height": 160,
+                        "overflow": "hidden",
+                        "resizeMode": "contain",
+                        "width": 262.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "padding": 20,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#000000",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Double Cheese McFlavor fries
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#ffc72c",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Rs 
+                      390
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": "50%",
+                        "marginLeft": -86.5,
+                        "position": "absolute",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "top": 12,
+                        }
+                      }
+                    >
+                      <View
+                        accessibilityState={
+                          {
+                            "busy": undefined,
+                            "checked": undefined,
+                            "disabled": false,
+                            "expanded": undefined,
+                            "selected": undefined,
+                          }
+                        }
+                        accessibilityValue={
+                          {
+                            "max": undefined,
+                            "min": undefined,
+                            "now": undefined,
+                            "text": undefined,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          {
+                            "alignItems": "center",
+                            "backgroundColor": "#da291c",
+                            "borderColor": "#da291c",
+                            "borderRadius": 80,
+                            "borderWidth": 1,
+                            "opacity": 1,
+                            "paddingVertical": 10.5,
+                            "width": "100%",
+                          }
+                        }
+                        testID="CustomIconButton"
+                      >
+                        <View
+                          style={
+                            {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "paddingHorizontal": 20,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              {
+                                "alignItems": "center",
+                                "backgroundColor": "#ffffff",
+                                "borderRadius": 66.5,
+                                "justifyContent": "center",
+                              }
+                            }
+                          >
+                            <Text
+                              allowFontScaling={false}
+                              selectable={false}
+                              style={
+                                [
+                                  {
+                                    "color": "#da291c",
+                                    "fontSize": 18,
+                                  },
+                                  undefined,
+                                  {
+                                    "fontFamily": "Material Design Icons",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                  {},
+                                ]
+                              }
+                            >
+                              󰐕
+                            </Text>
+                          </View>
+                          <Text
+                            style={
+                              [
+                                {
+                                  "color": "#000000",
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "marginLeft": 11.5,
+                                },
+                                {
+                                  "color": "#ffffff",
+                                },
+                              ]
+                            }
+                          >
+                            Tambah
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "padding": 10,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flex": 1,
+                    "height": 467,
+                  }
+                }
+                testID="HomeScreen_ProductOffers"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderRadius": 40,
+                      "elevation": 3,
+                      "height": 400,
+                      "justifyContent": "center",
+                      "width": 270,
+                    }
+                  }
+                >
+                  <RCTImageView
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    internal_analyticTag={null}
+                    resizeMode="contain"
+                    source={
+                      [
+                        {
+                          "height": undefined,
+                          "uri": undefined,
+                          "width": undefined,
+                        },
+                      ]
+                    }
+                    style={
+                      {
+                        "height": 160,
+                        "overflow": "hidden",
+                        "resizeMode": "contain",
+                        "width": 262.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "padding": 20,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#000000",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Triple Burger with Cheese
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#ffc72c",
+                          "fontWeight": "500",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Rs 
+                      280
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": "50%",
+                        "marginLeft": -86.5,
+                        "position": "absolute",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "top": 12,
+                        }
+                      }
+                    >
+                      <View
+                        accessibilityState={
+                          {
+                            "busy": undefined,
+                            "checked": undefined,
+                            "disabled": false,
+                            "expanded": undefined,
+                            "selected": undefined,
+                          }
+                        }
+                        accessibilityValue={
+                          {
+                            "max": undefined,
+                            "min": undefined,
+                            "now": undefined,
+                            "text": undefined,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          {
+                            "alignItems": "center",
+                            "backgroundColor": "#da291c",
+                            "borderColor": "#da291c",
+                            "borderRadius": 80,
+                            "borderWidth": 1,
+                            "opacity": 1,
+                            "paddingVertical": 10.5,
+                            "width": "100%",
+                          }
+                        }
+                        testID="CustomIconButton"
+                      >
+                        <View
+                          style={
+                            {
+                              "alignItems": "center",
+                              "flexDirection": "row",
+                              "paddingHorizontal": 20,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              {
+                                "alignItems": "center",
+                                "backgroundColor": "#ffffff",
+                                "borderRadius": 66.5,
+                                "justifyContent": "center",
+                              }
+                            }
+                          >
+                            <Text
+                              allowFontScaling={false}
+                              selectable={false}
+                              style={
+                                [
+                                  {
+                                    "color": "#da291c",
+                                    "fontSize": 18,
+                                  },
+                                  undefined,
+                                  {
+                                    "fontFamily": "Material Design Icons",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                  {},
+                                ]
+                              }
+                            >
+                              󰐕
+                            </Text>
+                          </View>
+                          <Text
+                            style={
+                              [
+                                {
+                                  "color": "#000000",
+                                  "fontSize": 15,
+                                  "fontWeight": "bold",
+                                  "marginLeft": 11.5,
+                                },
+                                {
+                                  "color": "#ffffff",
+                                },
+                              ]
+                            }
+                          >
+                            Tambah
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</RCTScrollView>
+`;

@@ -1,9 +1,9 @@
-// LoginScreen.test.tsx
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import LoginScreen from '../../src/screens/LoginScreen/LoginScreen';
+import renderer from 'react-test-renderer';
 
 const mockStore = configureStore([]);
 
@@ -42,3 +42,14 @@ describe('LoginScreen', () => {
     })
 
 })
+
+describe('LoginScreen Snapshot Test', () => {
+    it('renders correctly', () => {
+        const tree = renderer.create(
+            <Provider store={store}>
+                <LoginScreen />
+            </Provider>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+  });
