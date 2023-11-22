@@ -10,8 +10,14 @@ import App from '../App';
 import {it} from '@jest/globals';
 
 // Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import {create, act} from 'react-test-renderer';
 
-it('renders correctly', () => {
-  renderer.create(<App />);
-});
+describe('<App /> Basics', () => {
+  it('has 1 child', async () => {
+    let tree:any
+    act(()=>{
+       tree = create(<App />)
+    })
+    expect(tree.toJSON().children.length).toBe(1);
+  });
+})
