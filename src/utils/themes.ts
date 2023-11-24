@@ -17,7 +17,8 @@ const theme = {
         listIten:14,
         detailsLabel:20,
         authLabel:16,
-        valueLabel:10
+        valueLabel:10,
+        fabText:12
     }
 }
 
