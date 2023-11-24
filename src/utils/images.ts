@@ -15,7 +15,7 @@ export const carouselImages = [
 
 export const data = [
     {id: 1, label: 'Pune, India', value: 'pune'},
-    {id: 2, label: 'Bangalore, India', value: 'bangalore'},
+    {id: 2, label: 'Nashik, India', value: 'nashik'},
     {id: 3, label: 'Mumbai, India', value: 'mumbai'},
 ];
 

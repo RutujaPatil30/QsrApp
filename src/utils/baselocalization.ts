@@ -9,7 +9,7 @@ export default{
         homeScreenSearch : 'Search',
         homeScreenCategory : 'Kategori',
         homescreenSpecialOffers : 'Special Offers',
-        homescreenOffersViewAll : 'Lihat Semua >'
+        homescreenOffersViewAll : 'Lihat Semua >',
     },
     productDetailsScreen :{
         productDetailsOptionalText : 'Tambahkan Catatan',
@@ -60,4 +60,8 @@ export default{
         cancel: 'Cancel',
         ok: 'OK',
       },
+    mapViewScreen:{
+        mapViewScreenSelectCity:'Select City',
+        mapViewScreenClose:'Close'
+    }
 }

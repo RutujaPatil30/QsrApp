@@ -59,7 +59,9 @@ const HomeScreen = (props: any) => {
         <ScrollView contentContainerStyle={{ flexGrow: 1, opacity: onDropDownOpen ? 0.2 : 1 }}>
             <View style={styles.topView}>
                 <View style={styles.container}>
-                    <Image source={images.homescreen_mcdIcon} style={styles.logo} resizeMode={'contain'} />
+                    <TouchableOpacity onPress={() => { navigation.navigate('MapViewScreen') }}>
+                        <Image source={images.homescreen_mcdIcon} style={styles.logo} resizeMode={'contain'} />
+                    </TouchableOpacity>
                     <Dropdown testID="HomeScreen_LocationDropdown" data={data}
                         style={styles.dropdown}
                         placeholderStyle={styles.placeholderStyle}
@@ -180,3 +182,6 @@ const HomeScreen = (props: any) => {
 export default HomeScreen;
 
 
+
+
+// AIzaSyCMbrgU0BlBTch5-XGjsoXAnCaiGQvJ824
