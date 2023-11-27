@@ -19,6 +19,10 @@ import {
   SIGNUP_FAILURE,
   SIGNUP_REQUEST,
   SIGNUP_SUCCESS,
+  PAYMENT_REQUEST,
+  PAYMENT_SUCCESS,
+  PAYMENT_FAILURE,
+  ADD_PAYMENT_METHOD,
 } from './action';
 
 const initialState = {
@@ -28,6 +32,9 @@ const initialState = {
   currentUser: null,
   cartItems: [],
   error: '',
+  paymentStatus: null,
+  paymentDetails: null,
+  paymentMethods: [],
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -176,7 +183,28 @@ const reducer = (state = initialState, action: any) => {
         loading: false,
         error: action.error,
       };
-    
+    case PAYMENT_REQUEST:
+      return{
+        ...state,
+        loading: true,
+      }
+    case PAYMENT_SUCCESS:
+      return {
+        ...state,
+        paymentStatus: 'success',
+        paymentDetails: action.payload, 
+      };
+    case PAYMENT_FAILURE:
+      return{
+        ...state,
+        loading: false,
+        error: action.error,
+      }
+    case ADD_PAYMENT_METHOD:
+      return {
+        ...state,
+        paymentMethods: [...state.paymentMethods, action.payload],
+      };
     default:
       return state;
   }
@@ -185,5 +213,7 @@ const reducer = (state = initialState, action: any) => {
 const rootReducer = combineReducers({
   reducer: reducer,
 });
+
+export type RootState = ReturnType<typeof rootReducer>;
 
 export default rootReducer;

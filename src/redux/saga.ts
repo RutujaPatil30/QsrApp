@@ -18,6 +18,9 @@ import {
   SIGNUP_FAILURE,
   SIGNUP_REQUEST,
   SIGNUP_SUCCESS,
+  PAYMENT_REQUEST,
+  PAYMENT_SUCCESS,
+  PAYMENT_FAILURE,
 } from './action';
 
 function* signupfn(action: any) {
@@ -68,6 +71,13 @@ function* deleteCartItemfn(action: any) {
   }
 }
 
+function* paymentfn(action: any) {
+  try {
+    yield put({type:PAYMENT_SUCCESS , payload: action.payload});
+  } catch (error) {
+    yield put({type:PAYMENT_FAILURE, payload: error});
+  }
+}
 
 
 export function* mainSaga() {
@@ -77,4 +87,5 @@ export function* mainSaga() {
   yield takeLatest(REMOVE_FROM_CART_REQUEST, removeFromCartfn);
   yield takeLatest(DELETE_CART_ITEM_REQUEST, deleteCartItemfn);
   yield takeLatest(LOGOUT_REQUEST, logoutfn);
+  yield takeLatest(PAYMENT_REQUEST, paymentfn);
 }

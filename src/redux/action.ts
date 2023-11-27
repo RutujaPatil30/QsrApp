@@ -16,6 +16,10 @@ export const REMOVE_FROM_CART_FAILURE = 'REMOVE_FROM_CART_FAILURE';
 export const DELETE_CART_ITEM_REQUEST = 'DELETE_CART_ITEM_REQUEST';
 export const DELETE_CART_ITEM_SUCCESS = 'DELETE_CART_ITEM_SUCCESS';
 export const DELETE_CART_ITEM_FAILURE = 'DELETE_CART_ITEM_FAILURE';
+export const PAYMENT_REQUEST = "PAYMENT_REQUEST";
+export const PAYMENT_SUCCESS = "PAYMENT_SUCCESS";
+export const PAYMENT_FAILURE = "PAYMENT_FAILURE";
+export const ADD_PAYMENT_METHOD = 'ADD_PAYMENT_METHOD';
 
 
 export const signup_request = (data: any) => ({
@@ -107,5 +111,23 @@ export const delete_cart_item_failure = (error: any) => ({
   payload: error,
 });
 
+export const payment_request = (data: any) => ({
+  type:PAYMENT_REQUEST ,
+  payload: data,
+});
 
+export const payment_success = (data: any) => ({
+  type: PAYMENT_SUCCESS,
+  payload: data,
+});
+
+export const payment_failure = (error: any) => ({
+  type: PAYMENT_FAILURE,
+  payload: error,
+});
+
+export const addPaymentMethod = (paymentMethod) => ({
+  type: ADD_PAYMENT_METHOD,
+  payload: paymentMethod,
+});
 

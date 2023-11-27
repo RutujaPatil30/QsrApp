@@ -9,7 +9,7 @@ import theme from '../../utils/themes';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import baselocalization from '../../utils/baselocalization';
 
-const MapViewScreen: React.FC = () => {
+const MapViewScreen = () => {
   const [region, setRegion] = useState<Region | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [selectedCity, setSelectedCity] = useState<string | null>(null);

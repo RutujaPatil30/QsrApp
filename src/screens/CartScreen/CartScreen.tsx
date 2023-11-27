@@ -11,6 +11,7 @@ import { images } from "../../utils/images";
 
 
 const CartScreen = (props: any) => {
+    const {navigation} = props;
     const cartItems = useSelector((state: any) => state.reducer.cartItems);
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -89,7 +90,7 @@ const CartScreen = (props: any) => {
                         height: hp('6%'),
                         fontSize: theme.fonts.labels
                     }}
-                    onPress={() => { }}
+                    onPress={() => {navigation.navigate("PaymentScreen")}}
                 />
             </View>
         </View>
