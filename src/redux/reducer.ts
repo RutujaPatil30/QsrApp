@@ -23,6 +23,7 @@ import {
   PAYMENT_SUCCESS,
   PAYMENT_FAILURE,
   ADD_PAYMENT_METHOD,
+  SET_PAYMENT_METHOD,
 } from './action';
 
 const initialState = {
@@ -35,6 +36,7 @@ const initialState = {
   paymentStatus: null,
   paymentDetails: null,
   paymentMethods: [],
+  paymentMethod: null
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -204,7 +206,13 @@ const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         paymentMethods: [...state.paymentMethods, action.payload],
+        paymentMethod: action.payload,
       };
+    case SET_PAYMENT_METHOD:
+        return {
+          ...state,
+          paymentMethod: action.payload,
+        };
     default:
       return state;
   }
@@ -213,7 +221,5 @@ const reducer = (state = initialState, action: any) => {
 const rootReducer = combineReducers({
   reducer: reducer,
 });
-
-export type RootState = ReturnType<typeof rootReducer>;
 
 export default rootReducer;

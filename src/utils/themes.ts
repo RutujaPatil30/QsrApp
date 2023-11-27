@@ -7,7 +7,8 @@ const theme = {
         grey:'#808080',
         disabled: '#ffe18e',
         lightGrey:'#e2e2e2',
-        backgroundGrey:'#f6f6f6'
+        backgroundGrey:'#f6f6f6',
+        navyBlue:'#00165A'
     },
     fonts:{
         title:22,

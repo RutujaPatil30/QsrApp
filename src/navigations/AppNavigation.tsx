@@ -7,6 +7,7 @@ import ProductDetailsScreen from '../screens/ProductDetailsScreen/ProductDetails
 import SpecialOffersScreen from '../screens/SpecialOffersScreen/SpecialOffersScreen';
 import MapViewScreen from '../screens/MapViewScreen/MapViewScreen';
 import PaymentScreen from '../screens/PaymentScreen/PaymentScreen';
+import AddPaymentScreen from '../screens/AddPaymentScreen/AddPaymentScreen'
 import {LogBox} from 'react-native';
 
 
@@ -23,6 +24,7 @@ function AppNavigation() {
       <Stack.Screen name = "CategoryScreen" component={CategoryScreen}/>
       <Stack.Screen name = "MapViewScreen" component={MapViewScreen}/>
       <Stack.Screen name = "PaymentScreen" component={PaymentScreen}/>
+      <Stack.Screen name = "AddPaymentScreen" component={AddPaymentScreen}/>
     </Stack.Navigator>
   );
 }

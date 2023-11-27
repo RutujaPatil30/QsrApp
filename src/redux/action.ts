@@ -20,6 +20,7 @@ export const PAYMENT_REQUEST = "PAYMENT_REQUEST";
 export const PAYMENT_SUCCESS = "PAYMENT_SUCCESS";
 export const PAYMENT_FAILURE = "PAYMENT_FAILURE";
 export const ADD_PAYMENT_METHOD = 'ADD_PAYMENT_METHOD';
+export const SET_PAYMENT_METHOD = "SET_PAYMENT_METHOD";
 
 
 export const signup_request = (data: any) => ({
@@ -126,8 +127,13 @@ export const payment_failure = (error: any) => ({
   payload: error,
 });
 
-export const addPaymentMethod = (paymentMethod) => ({
+export const addPaymentMethod = (paymentMethod:any) => ({
   type: ADD_PAYMENT_METHOD,
   payload: paymentMethod,
+});
+
+export const setPaymentMethod = (method:any) => ({
+  type: SET_PAYMENT_METHOD,
+  payload: method,
 });
 

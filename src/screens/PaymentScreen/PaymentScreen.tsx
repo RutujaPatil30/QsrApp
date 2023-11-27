@@ -1,18 +1,32 @@
-// PaymentScreen.tsx
 import React from 'react';
 import CustomDropdownComponent from '../../components/CustomDropdown/CustomDropdown';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/reducer'; // Adjust the path as needed
+import { View, Text } from 'react-native';
+import styles from './styles';
 
 const PaymentScreen = ({ navigation }) => {
-  // Use useSelector with RootState to access the payment methods from Redux state
-  const paymentMethods = useSelector((state: RootState) => state.reducer.paymentMethod);
+  const paymentMethods = useSelector((state: any) => state.reducer.paymentMethods);
+  const selectedPaymentMethod = useSelector((state: any) => state.reducer.paymentMethod);
+
+  const dropdownOptions = paymentMethods.concat({ label: ' + Add New Payment', value: 'new' });
+
+  const onDropdownSelect = (selectedItem: any) => {
+    if (selectedItem === 'new') {
+      navigation.navigate('AddPaymentScreen');
+    } else {
+      // Handle selection of an existing payment method
+    }
+  };
 
   return (
-    <CustomDropdownComponent
-      navigation={navigation}
-      paymentMethods={paymentMethods}
-    />
+    <View style={styles.container}>
+      <Text style={styles.titleStyles}>Payment Method</Text>
+      <CustomDropdownComponent
+        options={dropdownOptions}
+        onSelect={onDropdownSelect}
+        selectedValue={selectedPaymentMethod ? selectedPaymentMethod.label : null} 
+      />
+    </View>
   );
 };
 

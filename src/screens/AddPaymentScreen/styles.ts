@@ -6,13 +6,10 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         padding:hp('2%'),
-        backgroundColor:theme.colors.white
+        backgroundColor:theme.colors.white,
     },
-    titleStyles:{
-        fontSize:theme.fonts.detailsLabel,
-        color:theme.colors.primary,
-        fontWeight:'bold',
-
+    textInputStyles:{
+        borderWidth:1,
     }
 })
 
