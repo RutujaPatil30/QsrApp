@@ -47,16 +47,17 @@ const styles = StyleSheet.create({
         color: theme.colors.black
     },
     buttonContainer :{
+        flexDirection:"row",
         alignItems: "center",
-        justifyContent:"flex-end", 
+        justifyContent:"space-evenly", 
         top:hp('70%')
     },
     bottomContainer1: {
         color: theme.colors.secondary,
         fontSize: 26,
         fontWeight: 'bold',
-        marginLeft: 20,
-        marginTop: 15,
+        marginLeft: wp('3%') ,
+        marginTop: wp('3%') ,
     },
     bottomContainer2: {
         color: theme.colors.primary,

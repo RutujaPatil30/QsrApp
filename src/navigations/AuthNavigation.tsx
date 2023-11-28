@@ -9,7 +9,7 @@ import ProductDetailsScreen from '../screens/ProductDetailsScreen/ProductDetails
 import SignupScreen from '../screens/SignupScreen/SignupScreen';
 import SpecialOffersScreen from '../screens/SpecialOffersScreen/SpecialOffersScreen';
 import MapViewScreen from '../screens/MapViewScreen/MapViewScreen';
-import PaymentScreen from '../screens/PaymentScreen/PaymentScreen';
+import CardScreen from '../screens/CardScreen/CardScreen';
 import AddPaymentScreen from '../screens/AddPaymentScreen/AddPaymentScreen';
 
 const Stack = createNativeStackNavigator();
@@ -35,7 +35,7 @@ const AuthNavigation = (props: any) => {
       <Stack.Screen name = "ProductDetailsScreen" component={ProductDetailsScreen}/>
       <Stack.Screen name = "CategoryScreen" component={CategoryScreen}/>
       <Stack.Screen name = "MapViewScreen" component={MapViewScreen}/>
-      <Stack.Screen name = "PaymentScreen" component={PaymentScreen}/>
+      <Stack.Screen name = "CardScreen" component={CardScreen}/>
       <Stack.Screen name = "AddPaymentScreen" component={AddPaymentScreen}/>
 
     </Stack.Navigator>

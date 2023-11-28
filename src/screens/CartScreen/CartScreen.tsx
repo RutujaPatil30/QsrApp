@@ -80,18 +80,31 @@ const CartScreen = (props: any) => {
                 </View>
             </ScrollView>
             <View style={styles.buttonContainer}>
-                <CustomButton testID='CartScreen_NextButton' text={baselocalization.cartScreen.cartScreenButtonText}
+                <CustomButton testID='CartScreen_NextButton' text={baselocalization.cartScreen.cartScreenPayButton}
                     disabled={false}
                     buttonStylesProps={{
                         backgroundColor: theme.colors.primary,
                         borderColor: theme.colors.primary,
                         textColor: theme.colors.white,
-                        width: wp('85%'),
+                        width: wp('45%'),
                         height: hp('6%'),
                         fontSize: theme.fonts.labels
                     }}
-                    onPress={() => {navigation.navigate("PaymentScreen")}}
+                    onPress={() => {}}
                 />
+                <View style={{marginBottom:10}}></View>
+                <CustomButton testID='CartScreen_PayButton' text={baselocalization.cartScreen.cartScreenButtonText}
+                disabled={false}
+                buttonStylesProps={{
+                    backgroundColor: theme.colors.primary,
+                    borderColor: theme.colors.primary,
+                    textColor: theme.colors.white,
+                    width: wp('45%'),
+                    height: hp('6%'),
+                    fontSize: theme.fonts.labels
+                }}
+                onPress={() => {navigation.navigate("CardScreen")}}
+            />
             </View>
         </View>
     ) : (

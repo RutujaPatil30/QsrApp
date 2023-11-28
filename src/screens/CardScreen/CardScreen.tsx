@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { View, Text } from 'react-native';
 import styles from './styles';
 
-const PaymentScreen = ({ navigation }) => {
+const CardScreen = ({ navigation }) => {
   const paymentMethods = useSelector((state: any) => state.reducer.paymentMethods);
   const selectedPaymentMethod = useSelector((state: any) => state.reducer.paymentMethod);
 
@@ -13,9 +13,7 @@ const PaymentScreen = ({ navigation }) => {
   const onDropdownSelect = (selectedItem: any) => {
     if (selectedItem === 'new') {
       navigation.navigate('AddPaymentScreen');
-    } else {
-      // Handle selection of an existing payment method
-    }
+    } 
   };
 
   return (
@@ -30,4 +28,4 @@ const PaymentScreen = ({ navigation }) => {
   );
 };
 
-export default PaymentScreen;
+export default CardScreen;

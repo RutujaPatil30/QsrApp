@@ -23,9 +23,10 @@ export default{
         cartScreenBiayaPengiriman: 'Biaya Pengiriman',
         cartScreenTotalBiaya: 'Total Biaya',
         cartScreenGratis: 'GRATIS',
-        cartScreenButtonText: 'Bayar',
+        cartScreenButtonText: 'Cards',
         cartScreentitle: 'Pesananmu',
         cartScreennoItem: 'No Item in the cart !!!',
+        cartScreenPayButton :'Bayar'
     },
     loginScreen: {
         loginScreenWelcome:"Welcome To McDonald's",
