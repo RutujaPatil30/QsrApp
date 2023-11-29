@@ -38,19 +38,19 @@ const LoginScreen = (props: any) => {
         const userExist = users.some((user: any) => user.email === values.email);
         if (!userExist) {
             Alert.alert(
-                baselocalization.loginScreen.validationError,
-                baselocalization.loginScreen.emailNotFound,
+                baselocalization.loginScreen.loginScreenValidationError,
+                baselocalization.loginScreen.loginScreenEmailNotFound,
             );
         } else if (userExist && user.password !== values.password) {
             Alert.alert(
-                baselocalization.loginScreen.validationError,
-                baselocalization.loginScreen.incorrectPassword,
+                baselocalization.loginScreen.loginScreenValidationError,
+                baselocalization.loginScreen.loginScreenIncorrectPassword,
             );
         } else if (userExist && user.password === values.password) {
             navigation.navigate('HomeScreen');
             dispatch(login_request(user));
         } else {
-            Alert.alert(baselocalization.loginScreen.checkEmailAndPassword);
+            Alert.alert(baselocalization.loginScreen.loginScreenCheckEmailAndPassword);
         }
     };
 
@@ -101,8 +101,8 @@ const LoginScreen = (props: any) => {
                                             onChangeText={handleChange('email')}
                                             onBlur={() => setFieldTouched('email')}
                                             isError={touched.email && errors.email ? true : false}
-                                            labelText={baselocalization.loginScreen.email}
-                                            lablePlaceHolder={baselocalization.loginScreen.emailPlaceHolder}
+                                            labelText={baselocalization.loginScreen.loginScreenEmail}
+                                            lablePlaceHolder={baselocalization.loginScreen.loginScreenEmailPlaceHolder}
                                         />
                                         <CustomTextInput
                                             testID='LoginScreen_PasswordInputField'
@@ -113,8 +113,8 @@ const LoginScreen = (props: any) => {
                                             isError={
                                                 touched.password && errors.password ? true : false
                                             }
-                                            labelText={baselocalization.loginScreen.password}
-                                            lablePlaceHolder={baselocalization.loginScreen.passwordPlaceHolder}
+                                            labelText={baselocalization.loginScreen.loginScreenPassword}
+                                            lablePlaceHolder={baselocalization.loginScreen.loginScreenPasswordPlaceHolder}
                                             secureTextEntry={true}
                                             isPassword={true}
                                         />
@@ -136,14 +136,14 @@ const LoginScreen = (props: any) => {
                             </Formik>
                             <View style={styles.accountExistViewStyle}>
                                 <Text style={styles.accoutExistStyle}>
-                                    {baselocalization.loginScreen.noAccountMsg}
+                                    {baselocalization.loginScreen.loginScreenNoAccountMsg}
                                 </Text>
                                 <TouchableOpacity
                                     onPress={() => {
                                         navigation.navigate('SignupScreen');
                                     }}>
                                     <Text style={styles.accoutExistBtnStyle}>
-                                        {baselocalization.loginScreen.signUp}
+                                        {baselocalization.loginScreen.loginScreenSignUp}
                                     </Text>
                                 </TouchableOpacity>
                             </View>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomCartElement from "../../components/CustomCartElement/CustomCartElement";
 import baselocalization from "../../utils/baselocalization";
@@ -8,11 +8,13 @@ import styles from "./styles";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { useSelector } from "react-redux";
 import { images } from "../../utils/images";
-
+import RazorpayCheckout from 'react-native-razorpay';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const CartScreen = (props: any) => {
-    const {navigation} = props;
+    const { navigation } = props;
     const cartItems = useSelector((state: any) => state.reducer.cartItems);
+    const userDetails = useSelector((state: any) => state.reducer.currentUser);
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
     const [isEmpty, setIsEmpty] = useState(true);
@@ -24,9 +26,9 @@ const CartScreen = (props: any) => {
             setIsEmpty(false);
         });
         if (count == 0) {
-          setIsEmpty(true);
+            setIsEmpty(true);
         }
-      }, [cartItems]);
+    }, [cartItems]);
 
     useEffect(() => {
         let newTotalItems = 0;
@@ -39,11 +41,39 @@ const CartScreen = (props: any) => {
         setTotalItems(newTotalItems);
         setTotalPrice(newTotalPrice);
     }, [cartItems]);
-    
+
+    const PayNow = () => {
+        var options = {
+            description: "Cart Items",
+            image: 'https://andhra.mallsmarket.com/sites/default/files/styles/large/public/images/brands/McDonalds-Logo.jpg',
+            currency: 'INR',
+            key: 'rzp_test_lLvZhM1ueHAPqL',
+            amount: totalPrice * 100,
+            name: `McDonald's`,
+            order_id: '',
+            prefill: {
+                email: userDetails.email,
+                contact: userDetails.phoneNumber,
+                name: userDetails.name,
+            },
+            theme: { color: theme.colors.primary },
+        };
+        RazorpayCheckout.open(options)
+            .then(data => {
+                alert(`Success: Payment Successful`);
+            })
+            .catch(error => {
+                alert(`Error: Payment Failed`);
+            });
+    }
+
     return !isEmpty ? (
         <View>
             <View style={styles.topView}>
                 <Text style={styles.pageTitle}>{baselocalization.cartScreen.cartScreenTitle}</Text>
+                <TouchableOpacity onPress={()=>{navigation.navigate('ProfileScreen')}}>
+                    <Icon name="account-circle" size={30} color={theme.colors.primary} style={{ marginLeft: wp('55%') }} />
+                </TouchableOpacity>
             </View>
             <ScrollView style={styles.scrollViewStyle} >
                 {cartItems.map(item =>
@@ -75,7 +105,7 @@ const CartScreen = (props: any) => {
                         <Text style={styles.gratisStyle}>
                             {baselocalization.cartScreen.cartScreenGratis}
                         </Text>
-                        <Text testID= 'CartScreen_TotalPrice' style={styles.totalPriceText}>Rs {totalPrice}</Text>
+                        <Text testID='CartScreen_TotalPrice' style={styles.totalPriceText}>Rs {totalPrice}</Text>
                     </View>
                 </View>
             </ScrollView>
@@ -90,39 +120,39 @@ const CartScreen = (props: any) => {
                         height: hp('6%'),
                         fontSize: theme.fonts.labels
                     }}
-                    onPress={() => {}}
+                    onPress={() => { PayNow() }}
                 />
-                <View style={{marginBottom:10}}></View>
+                <View style={{ marginBottom: 10 }}></View>
                 <CustomButton testID='CartScreen_PayButton' text={baselocalization.cartScreen.cartScreenButtonText}
-                disabled={false}
-                buttonStylesProps={{
-                    backgroundColor: theme.colors.primary,
-                    borderColor: theme.colors.primary,
-                    textColor: theme.colors.white,
-                    width: wp('45%'),
-                    height: hp('6%'),
-                    fontSize: theme.fonts.labels
-                }}
-                onPress={() => {navigation.navigate("CardScreen")}}
-            />
+                    disabled={false}
+                    buttonStylesProps={{
+                        backgroundColor: theme.colors.primary,
+                        borderColor: theme.colors.primary,
+                        textColor: theme.colors.white,
+                        width: wp('45%'),
+                        height: hp('6%'),
+                        fontSize: theme.fonts.labels
+                    }}
+                    onPress={() => { navigation.navigate("CardScreen") }}
+                />
             </View>
         </View>
     ) : (
-            <View style={styles.container}>
-                <View style={styles.topView}>
-                    <Text style={styles.bottomContainer1}>
-                        {baselocalization.cartScreen.cartScreentitle}
-                    </Text>
-                    <Text style={styles.bottomContainer2}>
-                        {baselocalization.cartScreen.cartScreennoItem}
-                    </Text>
-                </View>
-                <View style={styles.noRideContainer}>
-                  <>
-                    <Image source={images.cartScreen_emptyCart} style = {styles.noRideImage}/>
-                  </>
-                </View>
-    </View>
+        <View style={styles.container}>
+            <View style={styles.topView}>
+                <Text style={styles.bottomContainer1}>
+                    {baselocalization.cartScreen.cartScreentitle}
+                </Text>
+                <Text style={styles.bottomContainer2}>
+                    {baselocalization.cartScreen.cartScreennoItem}
+                </Text>
+            </View>
+            <View style={styles.noRideContainer}>
+                <>
+                    <Image source={images.cartScreen_emptyCart} style={styles.noRideImage} />
+                </>
+            </View>
+        </View>
     )
 }
 

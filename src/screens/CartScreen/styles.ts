@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
         padding: hp('2%'),
         borderBottomRightRadius: wp('10%'),
         borderBottomLeftRadius: wp('10%'),
+        flexDirection:'row'
     },
     pageTitle: {
         fontSize: theme.fonts.detailsLabel,

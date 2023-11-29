@@ -40,14 +40,14 @@ const SignupScreen = (props: any) => {
     const userExist = users.some((user: any) => user.email === values.email);
     if (userExist) {
       Alert.alert(
-        baselocalization.signupScreen.error,
-        baselocalization.signupScreen.accountExistAlertMsg,
+        baselocalization.signupScreen.signupScreenError,
+        baselocalization.signupScreen.signupScreenAccountExistAlertMsg,
         [
           {
-            text: baselocalization.signupScreen.cancel,
+            text: baselocalization.signupScreen.signupScreenCancel,
           },
           {
-            text: baselocalization.signupScreen.ok,
+            text: baselocalization.signupScreen.signupScreenOk,
             onPress: () => {
               navigation.navigate('LoginScreen');
             },
@@ -87,7 +87,7 @@ const SignupScreen = (props: any) => {
             {baselocalization.loginScreen.loginScreenWelcome}
           </Text>
           <Text style={styles.textHeaderStyle}>
-            {baselocalization.signupScreen.signUpMsg}
+            {baselocalization.signupScreen.signupScreenSignUpMsg}
           </Text>
         </View>
         <View>
@@ -116,8 +116,8 @@ const SignupScreen = (props: any) => {
                       onChangeText={handleChange('name')}
                       onBlur={() => setFieldTouched('name')}
                       isError={touched.name && errors.name ? true : false}
-                      labelText={baselocalization.signupScreen.name}
-                      lablePlaceHolder={baselocalization.signupScreen.namePlaceHolder}
+                      labelText={baselocalization.signupScreen.signupScreenName}
+                      lablePlaceHolder={baselocalization.signupScreen.signupScreenNamePlaceHolder}
                     />
                     <CustomTextInput
                       testID='SignupScreen_EmailInputField'
@@ -126,8 +126,8 @@ const SignupScreen = (props: any) => {
                       onChangeText={handleChange('email')}
                       onBlur={() => setFieldTouched('email')}
                       isError={touched.email && errors.email ? true : false}
-                      labelText={baselocalization.loginScreen.email}
-                      lablePlaceHolder={baselocalization.loginScreen.emailPlaceHolder}
+                      labelText={baselocalization.loginScreen.loginScreenEmail}
+                      lablePlaceHolder={baselocalization.loginScreen.loginScreenEmailPlaceHolder}
                     />
                     <CustomTextInput
                       testID='SignupScreen_PhoneInputField'
@@ -140,8 +140,8 @@ const SignupScreen = (props: any) => {
                       isError={
                         touched.phoneNumber && errors.phoneNumber ? true : false
                       }
-                      labelText={baselocalization.signupScreen.phone}
-                      lablePlaceHolder={baselocalization.signupScreen.phonePlaceHolder}
+                      labelText={baselocalization.signupScreen.signupScreenPhone}
+                      lablePlaceHolder={baselocalization.signupScreen.signupScreenPhonePlaceHolder}
                     />
                     <CustomTextInput
                       testID='SignupScreen_PasswordInputField'
@@ -152,8 +152,8 @@ const SignupScreen = (props: any) => {
                       isError={
                         touched.password && errors.password ? true : false
                       }
-                      labelText={baselocalization.loginScreen.password}
-                      lablePlaceHolder={baselocalization.loginScreen.passwordPlaceHolder}
+                      labelText={baselocalization.loginScreen.loginScreenPassword}
+                      lablePlaceHolder={baselocalization.loginScreen.loginScreenPasswordPlaceHolder}
                       secureTextEntry={true}
                       isPassword={true}
                     />
@@ -168,8 +168,8 @@ const SignupScreen = (props: any) => {
                           ? true
                           : false
                       }
-                      labelText={baselocalization.signupScreen.confirmPassword}
-                      lablePlaceHolder={baselocalization.loginScreen.passwordPlaceHolder}
+                      labelText={baselocalization.signupScreen.signupScreenConfirmPassword}
+                      lablePlaceHolder={baselocalization.loginScreen.loginScreenPasswordPlaceHolder}
                       secureTextEntry={true}
                       isPassword={true}
                     />                
@@ -191,14 +191,14 @@ const SignupScreen = (props: any) => {
               </Formik>
               <View style={styles.accountExistViewStyle}>
                 <Text style={styles.accoutExistStyle}>
-                  {baselocalization.signupScreen.accountExistMsg}
+                  {baselocalization.signupScreen.signupScreenAccountExistMsg}
                 </Text>
                 <TouchableOpacity
                   onPress={() => {
                     navigation.navigate('LoginScreen');
                   }}>
                   <Text style={styles.accoutExistBtnStyle}>
-                    {baselocalization.signupScreen.signIn}
+                    {baselocalization.signupScreen.signupScreenSignIn}
                   </Text>
                 </TouchableOpacity>
               </View>
