@@ -11,6 +11,7 @@ import SpecialOffersScreen from '../screens/SpecialOffersScreen/SpecialOffersScr
 import MapViewScreen from '../screens/MapViewScreen/MapViewScreen';
 import CardScreen from '../screens/CardScreen/CardScreen';
 import AddPaymentScreen from '../screens/AddPaymentScreen/AddPaymentScreen';
+import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,7 +38,7 @@ const AuthNavigation = (props: any) => {
       <Stack.Screen name = "MapViewScreen" component={MapViewScreen}/>
       <Stack.Screen name = "CardScreen" component={CardScreen}/>
       <Stack.Screen name = "AddPaymentScreen" component={AddPaymentScreen}/>
-
+      <Stack.Screen name = "ProfileScreen" component={ProfileScreen}/>
     </Stack.Navigator>
   );
 };

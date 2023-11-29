@@ -53,17 +53,11 @@ const styles = StyleSheet.create({
         justifyContent:"space-evenly", 
         top:hp('70%')
     },
-    bottomContainer1: {
-        color: theme.colors.secondary,
-        fontSize: 26,
-        fontWeight: 'bold',
-        marginLeft: wp('3%') ,
-        marginTop: wp('3%') ,
-    },
-    bottomContainer2: {
+    TextContainer: {
         color: theme.colors.primary,
-        fontSize: 18,
+        fontSize: theme.fonts.detailsLabel,
         fontWeight: '500',
+        alignSelf:"center",
     },
     noRideContainer: {
         flex: 1,
@@ -72,9 +66,9 @@ const styles = StyleSheet.create({
     },
     noRideImage: {
         width:wp('100%'),
-        height: hp('20%'),
+        height: hp('25%'),
         resizeMode: 'contain',
-      },
+    },
 })
 
 export default styles;

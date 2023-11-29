@@ -4,7 +4,8 @@ export const images = {
     onboarding_logo: require(prefix + 'mcdLogo.png'),
     onboarding_ronald : require(prefix + 'mcdronald.png'),
     homescreen_mcdIcon : require(prefix + 'mcdIcon.png'),
-    cartScreen_emptyCart : require(prefix + 'emptyCart.png')
+    cartScreen_emptyCart : require(prefix + 'emptyCart.png'),
+    profileScreen_mcdTagline : require(prefix + 'mcdTagline.png')
    
 }
 export const carouselImages = [
@@ -101,3 +102,22 @@ export const SpecialOfferData = [
       qty: 0,
     },
   ];
+
+export const avatars = {
+  profileOne : require(prefix + 'avatarOne.png'),
+  profileTwo : require(prefix + 'avatarTwo.png'),
+  profileThree : require(prefix + 'avatarThree.png'),
+  profileFour : require(prefix + 'avatarFour.png'),
+  profileFive : require(prefix + 'avatarFive.png'),
+  profileSix : require(prefix + 'avatarSix.png'),
+  profileSeven : require(prefix + 'avatarSeven.png'),
+  profileEight : require(prefix + 'avatarEight.png'),
+  profileNine : require(prefix + 'avatarNine.png'),
+  profileTen : require(prefix + 'avatarTen.png'),
+  profileEleven : require(prefix + 'avatarEleven.png'),
+  profileTwelve : require(prefix + 'avatarTwelve.png'),
+  profileThirteen : require(prefix + 'avatarThirteen.png'),
+  profileFourteen : require(prefix + 'avatarFourteen.png'),
+  profileFifteen : require(prefix + 'avatarFifteen.png'),
+  profileSixteen : require(prefix + 'avatarSixteen.png'),
+}

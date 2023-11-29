@@ -61,6 +61,7 @@ const CartScreen = (props: any) => {
         RazorpayCheckout.open(options)
             .then(data => {
                 alert(`Success: Payment Successful`);
+                setIsEmpty(true);
             })
             .catch(error => {
                 alert(`Error: Payment Failed`);
@@ -140,10 +141,7 @@ const CartScreen = (props: any) => {
     ) : (
         <View style={styles.container}>
             <View style={styles.topView}>
-                <Text style={styles.bottomContainer1}>
-                    {baselocalization.cartScreen.cartScreentitle}
-                </Text>
-                <Text style={styles.bottomContainer2}>
+                <Text style={styles.TextContainer}>
                     {baselocalization.cartScreen.cartScreennoItem}
                 </Text>
             </View>
