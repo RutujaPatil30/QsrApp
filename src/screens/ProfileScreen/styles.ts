@@ -5,7 +5,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexGrow: 1,
     },
     viewStyles: {
         width: wp('100%'),
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         borderColor: theme.colors.secondary,
     },
     titleStyles: {
-        backgroundColor: theme.colors.primary,
+        flex:8,
         padding: hp('2%'),
         fontSize: theme.fonts.title,
         fontWeight: 'bold',
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
     },
     avatarItem: {
-        zIndex:1,
         width: wp('18%'), 
         height: hp('10%'), 
         margin: hp('1%'),
@@ -116,7 +115,21 @@ const styles = StyleSheet.create({
         color: theme.colors.white,
         fontWeight: 'bold',
         marginLeft:hp('5%')
-    }
+    },
+    recentTextStyles:{
+        paddingLeft: hp('3.2%'),
+        color:theme.colors.primary,
+        fontSize:theme.fonts.authLabel,
+        fontWeight:'bold'
+    },
+    iconContainer:{
+        alignSelf:'center',
+        flex:1
+    },
+    topContainer:{
+        flexDirection:'row',
+        backgroundColor:theme.colors.primary
+    },
 });
 
 

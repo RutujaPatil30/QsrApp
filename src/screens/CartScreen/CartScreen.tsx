@@ -47,7 +47,7 @@ const CartScreen = (props: any) => {
             description: "Cart Items",
             image: 'https://andhra.mallsmarket.com/sites/default/files/styles/large/public/images/brands/McDonalds-Logo.jpg',
             currency: 'INR',
-            key: 'rzp_test_lLvZhM1ueHAPqL',
+            key: 'rzp_test_6BL5V2w5EMP1xC',
             amount: totalPrice * 100,
             name: `McDonald's`,
             order_id: '',
@@ -61,10 +61,10 @@ const CartScreen = (props: any) => {
         RazorpayCheckout.open(options)
             .then(data => {
                 alert(`Success: Payment Successful`);
-                setIsEmpty(true);
+                // setIsEmpty(true);
             })
             .catch(error => {
-                alert(`Error: Payment Failed`);
+                alert(`Error: ${error.code} | ${error.description}`);
             });
     }
 
@@ -73,7 +73,7 @@ const CartScreen = (props: any) => {
             <View style={styles.topView}>
                 <Text style={styles.pageTitle}>{baselocalization.cartScreen.cartScreenTitle}</Text>
                 <TouchableOpacity onPress={()=>{navigation.navigate('ProfileScreen')}}>
-                    <Icon name="account-circle" size={30} color={theme.colors.primary} style={{ marginLeft: wp('55%') }} />
+                    <Icon name="account-circle" size={35} color={theme.colors.primary} style={{ marginLeft: wp('55%') }} />
                 </TouchableOpacity>
             </View>
             <ScrollView style={styles.scrollViewStyle} >

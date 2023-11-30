@@ -1,5 +1,5 @@
 //@ts-nocheck
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import {
   ADD_TO_CART_FAILURE,
   ADD_TO_CART_REQUEST,
@@ -24,6 +24,8 @@ import {
   PAYMENT_FAILURE,
   ADD_PAYMENT_METHOD,
   SET_PAYMENT_METHOD,
+  SET_SELECTED_AVATAR,
+  CLEAR_SELECTED_AVATAR
 } from './action';
 
 const initialState = {
@@ -36,7 +38,8 @@ const initialState = {
   paymentStatus: null,
   paymentDetails: null,
   paymentMethods: [],
-  paymentMethod: null
+  paymentMethod: null,
+  selectedAvatar: null,
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -106,8 +109,8 @@ const reducer = (state = initialState, action: any) => {
       let myindex = -1;
       state.cartItems.map((item, index) => {
         if (
-          item.id === action.payload.item.id 
-          
+          item.id === action.payload.item.id
+
         ) {
           myindex = index;
         }
@@ -144,7 +147,7 @@ const reducer = (state = initialState, action: any) => {
       let startingIndex = -1;
       state.cartItems.map((item, index) => {
         if (
-          item.id === action.payload.item.id 
+          item.id === action.payload.item.id
         ) {
           startingIndex = index;
         }
@@ -173,7 +176,7 @@ const reducer = (state = initialState, action: any) => {
     case DELETE_CART_ITEM_SUCCESS:
       const updatedCartItems = state.cartItems.filter(
         item =>
-          item.id !== action.payload.item.id 
+          item.id !== action.payload.item.id
       );
       return {
         ...state,
@@ -186,7 +189,7 @@ const reducer = (state = initialState, action: any) => {
         error: action.error,
       };
     case PAYMENT_REQUEST:
-      return{
+      return {
         ...state,
         loading: true,
       }
@@ -194,10 +197,10 @@ const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         paymentStatus: 'success',
-        paymentDetails: action.payload, 
+        paymentDetails: action.payload,
       };
     case PAYMENT_FAILURE:
-      return{
+      return {
         ...state,
         loading: false,
         error: action.error,
@@ -209,10 +212,20 @@ const reducer = (state = initialState, action: any) => {
         paymentMethod: action.payload,
       };
     case SET_PAYMENT_METHOD:
-        return {
-          ...state,
-          paymentMethod: action.payload,
-        };
+      return {
+        ...state,
+        paymentMethod: action.payload,
+      };
+    case SET_SELECTED_AVATAR:
+      return {
+        ...state,
+        selectedAvatar: action.payload,
+      };
+    case CLEAR_SELECTED_AVATAR:
+      return {
+        ...state,
+        selectedAvatar: null,
+      };
     default:
       return state;
   }

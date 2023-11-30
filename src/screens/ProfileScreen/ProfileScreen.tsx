@@ -1,39 +1,59 @@
 import React, { useState } from "react";
-import { Text, View, Image, Modal, FlatList,TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux";
-import { avatars, images } from "../../utils/images";
+import { Text, View, Image, Modal, FlatList, TouchableOpacity, ScrollView } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import { avatars } from "../../utils/images";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import styles from "./styles";
 import baselocalization from "../../utils/baselocalization";
+import { clearSelectedAvatar, logout_request, setSelectedAvatar } from "../../redux/action";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import theme from "../../utils/themes";
+
 
 const ProfileScreen = (props: any) => {
     const { navigation } = props;
     const userDetails = useSelector((state: any) => state.reducer.currentUser);
-    const [selectedAvatar, setSelectedAvatar] = useState(null);
+    const selectedAvatar = useSelector((state: any) => state.reducer.selectedAvatar); // Access selected avatar from Redux state
+    const dispatch = useDispatch();
     const [initials, setInitials] = useState(userDetails.name.charAt(0).toUpperCase());
     const [isAvatarModalVisible, setAvatarModalVisible] = useState(false);
     const toggleAvatarModal = () => {
         setAvatarModalVisible(!isAvatarModalVisible);
     };
-   const onPressDefault = ()=>{
-        setSelectedAvatar(null); 
+    const onPressDefault = () => {
+        dispatch(clearSelectedAvatar());
         toggleAvatarModal();
-   }
-    const renderAvatar = ({item}) => {
+    }
+    const renderAvatar = ({ item }) => {
         return <TouchableOpacity
             style={styles.avatarItem}
             onPress={() => {
-                setSelectedAvatar(item);
                 toggleAvatarModal();
+                dispatch(setSelectedAvatar(item));
             }}
         >
             <Image source={item} style={styles.avatarImage} />
         </TouchableOpacity>
     }
+    const handleLogout = () => {
+        navigation.navigate('OnboardingScreen'),
+            dispatch(logout_request());
+    };
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.titleStyles}>{baselocalization.profileScreen.profileScreenTitle}</Text>
+        <ScrollView style={styles.container}>
+            <View style={styles.topContainer}>
+                <Text style={styles.titleStyles}>{baselocalization.profileScreen.profileScreenTitle}</Text>
+                <TouchableOpacity style={styles.iconContainer}>
+                    <Icon
+                        color={theme.colors.white}
+                        name='logout'
+                        size={26}
+                        onPress={handleLogout}
+                    />
+                </TouchableOpacity>
+            </View>
+
             <View style={styles.viewStyles}></View>
             <TouchableOpacity style={selectedAvatar ? styles.imageContainer : styles.initialContainer} onPress={toggleAvatarModal}>
                 {selectedAvatar ? (
@@ -56,11 +76,11 @@ const ProfileScreen = (props: any) => {
                         keyExtractor={(item, index) => index.toString()}
                         renderItem={(item) => renderAvatar(item)}
                     />
-                    <View style={{flexDirection:'row',justifyContent:'space-evenly' }}>
-                    <Text onPress={toggleAvatarModal} style={styles.closeText}>{baselocalization.profileScreen.profileScreenClose}</Text>
-                    <Text onPress={onPressDefault} style={styles.defaultText}>{baselocalization.profileScreen.profileScreenDefault}</Text>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
+                        <Text onPress={toggleAvatarModal} style={styles.closeText}>{baselocalization.profileScreen.profileScreenClose}</Text>
+                        <Text onPress={onPressDefault} style={styles.defaultText}>{baselocalization.profileScreen.profileScreenDefault}</Text>
                     </View>
-                   
+
                 </View>
             </Modal>
             <View style={styles.innerContainer}>
@@ -77,7 +97,9 @@ const ProfileScreen = (props: any) => {
                     <Text style={styles.detailsLabel}>{userDetails.phoneNumber}</Text>
                 </View>
             </View>
-        </View>
+            <Text style={styles.recentTextStyles}>Recent Orders</Text>
+            
+        </ScrollView>
     )
 }
 

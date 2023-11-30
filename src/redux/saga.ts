@@ -1,4 +1,4 @@
-import {put, takeLatest} from 'redux-saga/effects';
+import { put, takeLatest } from 'redux-saga/effects';
 import {
   ADD_TO_CART_FAILURE,
   ADD_TO_CART_REQUEST,
@@ -21,64 +21,66 @@ import {
   PAYMENT_REQUEST,
   PAYMENT_SUCCESS,
   PAYMENT_FAILURE,
+  SET_SELECTED_AVATAR,
+  CLEAR_SELECTED_AVATAR,
+
 } from './action';
 
 function* signupfn(action: any) {
   try {
-    yield put({type: SIGNUP_SUCCESS, payload: action.payload});
+    yield put({ type: SIGNUP_SUCCESS, payload: action.payload });
   } catch (error) {
-    yield put({type: SIGNUP_FAILURE, payload: error});
+    yield put({ type: SIGNUP_FAILURE, payload: error });
   }
 }
 
 function* loginfn(action: any) {
   try {
-    yield put({type: LOGIN_SUCCESS, payload: action.payload});
+    yield put({ type: LOGIN_SUCCESS, payload: action.payload });
   } catch (error) {
-    yield put({type: LOGIN_FAILURE, payload: error});
+    yield put({ type: LOGIN_FAILURE, payload: error });
   }
 }
 
 function* logoutfn() {
   try {
-    yield put({type: LOGOUT_SUCCESS, payload: false});
+    yield put({ type: LOGOUT_SUCCESS, payload: false });
   } catch (error) {
-    yield put({type: LOGOUT_FAILURE, payload: error});
+    yield put({ type: LOGOUT_FAILURE, payload: error });
   }
 }
 
 function* addToCartfn(action: any) {
   try {
-    yield put({type: ADD_TO_CART_SUCCESS, payload: action.payload});
+    yield put({ type: ADD_TO_CART_SUCCESS, payload: action.payload });
   } catch (error) {
-    yield put({type: ADD_TO_CART_FAILURE, payload: error});
+    yield put({ type: ADD_TO_CART_FAILURE, payload: error });
   }
 }
 
 function* removeFromCartfn(action: any) {
   try {
-    yield put({type: REMOVE_FROM_CART_SUCCESS, payload: action.payload});
+    yield put({ type: REMOVE_FROM_CART_SUCCESS, payload: action.payload });
   } catch (error) {
-    yield put({type: REMOVE_FROM_CART_FAILURE, payload: error});
+    yield put({ type: REMOVE_FROM_CART_FAILURE, payload: error });
   }
 }
 
 function* deleteCartItemfn(action: any) {
   try {
-    yield put({type: DELETE_CART_ITEM_SUCCESS, payload: action.payload});
+    yield put({ type: DELETE_CART_ITEM_SUCCESS, payload: action.payload });
   } catch (error) {
-    yield put({type: DELETE_CART_ITEM_FAILURE, payload: error});
+    yield put({ type: DELETE_CART_ITEM_FAILURE, payload: error });
   }
 }
 
 function* paymentfn(action: any) {
   try {
-    yield put({type:PAYMENT_SUCCESS , payload: action.payload});
+    yield put({ type: PAYMENT_SUCCESS, payload: action.payload });
   } catch (error) {
-    yield put({type:PAYMENT_FAILURE, payload: error});
+    yield put({ type: PAYMENT_FAILURE, payload: error });
   }
 }
-
 
 export function* mainSaga() {
   yield takeLatest(SIGNUP_REQUEST, signupfn);

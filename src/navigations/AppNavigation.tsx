@@ -10,6 +10,9 @@ import CardScreen from '../screens/CardScreen/CardScreen';
 import AddPaymentScreen from '../screens/AddPaymentScreen/AddPaymentScreen'
 import {LogBox} from 'react-native';
 import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
+import OnboardingScreen from '../screens/OnboardingScreen/OnboardingScreen';
+import LoginScreen from '../screens/LoginScreen/LoginScreen';
+import SignupScreen from '../screens/SignupScreen/SignupScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -27,6 +30,9 @@ function AppNavigation() {
       <Stack.Screen name = "CardScreen" component={CardScreen}/>
       <Stack.Screen name = "AddPaymentScreen" component={AddPaymentScreen}/>
       <Stack.Screen name = "ProfileScreen" component={ProfileScreen}/>
+      <Stack.Screen name={'OnboardingScreen'} component={OnboardingScreen}/>
+      <Stack.Screen name={'LoginScreen'} component={LoginScreen}/>
+      <Stack.Screen name="SignupScreen" component={SignupScreen} />
     </Stack.Navigator>
   );
 }

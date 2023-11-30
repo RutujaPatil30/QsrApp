@@ -12,7 +12,7 @@ import styles from "./styles";
 import CustomCategory from "../../components/CustomCategory/CustomCategory";
 import CustomProductOffers from "../../components/CustomProductOffers/CustomProductsOffers";
 import { useDispatch } from "react-redux";
-import {add_to_cart_request, logout_request} from '../../redux/action';
+import {add_to_cart_request} from '../../redux/action';
 
 
 const HomeScreen = (props: any) => {
@@ -23,12 +23,6 @@ const HomeScreen = (props: any) => {
     const [onDropDownOpen, setDropDownOpen] = useState(false);
     const [filteredCategories, setFilteredCategories] = useState(category);
     const { navigation } = props;
-
-    
-    const handleLogout = () => {
-        navigation.navigate('OnboardingScreen'),
-        dispatch(logout_request());
-    };
 
     const filterCategories = (query: any) => {
         const filtered = category.filter(Kategori =>
@@ -89,9 +83,9 @@ const HomeScreen = (props: any) => {
                     <TouchableOpacity style={styles.iconContainer}>
                         <Icon
                             color={theme.colors.white}
-                            name='logout'
+                            name='cart-outline'
                             size={26}
-                            onPress={handleLogout}
+                            onPress={()=>{navigation.navigate('CartScreen')}}
                         />
                     </TouchableOpacity>
                 </View>

@@ -21,6 +21,8 @@ export const PAYMENT_SUCCESS = "PAYMENT_SUCCESS";
 export const PAYMENT_FAILURE = "PAYMENT_FAILURE";
 export const ADD_PAYMENT_METHOD = 'ADD_PAYMENT_METHOD';
 export const SET_PAYMENT_METHOD = "SET_PAYMENT_METHOD";
+export const SET_SELECTED_AVATAR = 'SET_SELECTED_AVATAR';
+export const CLEAR_SELECTED_AVATAR = "CLEAR_SELECTED_AVATAR";
 
 
 export const signup_request = (data: any) => ({
@@ -137,3 +139,11 @@ export const setPaymentMethod = (method:any) => ({
   payload: method,
 });
 
+export const setSelectedAvatar = (avatar : any) => ({
+  type: SET_SELECTED_AVATAR,
+  payload: avatar,
+});
+
+export const clearSelectedAvatar = () => ({
+  type: CLEAR_SELECTED_AVATAR,
+});
