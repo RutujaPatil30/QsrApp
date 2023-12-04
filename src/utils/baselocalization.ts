@@ -1,32 +1,32 @@
 export default{
     onboardingScreen :{
-        onboardingScreenTitle : 'Selamat Datang di McDonald',
-        onboardingScreenSubtitle : 'Makin hemat dan praktis peran lewat aplikasi, banyak menu, banyak promo, nggakperlu keluar rumah!',
-        onboardingScreenButtonText : 'Pesan Sekarang'
+        onboardingScreenTitle : `Welcome to McDonald's`,
+        onboardingScreenSubtitle : 'More economical and practical roles through the application, lots of menus, lots of promotions, no need to leave the house!',
+        onboardingScreenButtonText : 'Order now'
     },
     homeScreen:{
         homeScreenDropdownPlaceholder : 'Select location',
         homeScreenSearch : 'Search',
-        homeScreenCategory : 'Kategori',
+        homeScreenCategory : 'Category',
         homescreenSpecialOffers : 'Special Offers',
-        homescreenOffersViewAll : 'Lihat Semua >',
+        homescreenOffersViewAll : 'See All >',
     },
     productDetailsScreen :{
-        productDetailsOptionalText : 'Tambahkan Catatan',
+        productDetailsOptionalText : 'Add Notes',
         productDetailsOptionalLabel : '(Optional)',
-        productsDetailsTextInput : 'Cth. Tanpa keju dan tomat',
-        productsDetailsToast : 'Item ditambahkan ke keranjang'
+        productsDetailsTextInput : 'Eg. No cheese and tomatoes',
+        productsDetailsToast : 'Item added to cart'
     },
     cartScreen:{
-        cartScreenTitle : 'Pesananmu',
+        cartScreenTitle : 'Your Order',
         cartScreenTotalItem: 'Total Items',
-        cartScreenBiayaPengiriman: 'Biaya Pengiriman',
-        cartScreenTotalBiaya: 'Total Biaya',
-        cartScreenGratis: 'GRATIS',
+        cartScreenBiayaPengiriman: 'Shipping costs',
+        cartScreenTotalBiaya: 'Total cost',
+        cartScreenGratis: 'FREE',
         cartScreenButtonText: 'Cards',
-        cartScreentitle: 'Pesananmu',
+        cartScreentitle: 'Your Order',
         cartScreennoItem: 'No Item in the cart !!!',
-        cartScreenPayButton :'Bayar'
+        cartScreenPayButton :'Pay'
     },
     loginScreen: {
         loginScreenWelcome:"Welcome To McDonald's",

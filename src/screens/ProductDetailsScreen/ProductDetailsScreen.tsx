@@ -10,7 +10,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import theme from "../../utils/themes";
 import Toast from 'react-native-simple-toast';
 import styles from "./styles";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { add_to_cart_request } from "../../redux/action";
 
 const ProductDetailsScreen = (props: any) => {
@@ -18,9 +18,12 @@ const ProductDetailsScreen = (props: any) => {
     const dispatch = useDispatch();
     const [text, setText] = React.useState('');
 
+    const userId = useSelector((state: any) => state.reducer.currentUser.id);
+
     const addItems = () => {
-        dispatch(add_to_cart_request(route.params.itemDetails));
-        Toast.show(baselocalization.productDetailsScreen.productsDetailsToast, Toast.SHORT);
+      dispatch(add_to_cart_request(userId, route.params.itemDetails));
+      Toast.show(baselocalization.productDetailsScreen.productsDetailsToast, Toast.SHORT);
+
     };
     
     return (

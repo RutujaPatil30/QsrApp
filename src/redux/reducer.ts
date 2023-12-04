@@ -25,7 +25,9 @@ import {
   ADD_PAYMENT_METHOD,
   SET_PAYMENT_METHOD,
   SET_SELECTED_AVATAR,
-  CLEAR_SELECTED_AVATAR
+  CLEAR_SELECTED_AVATAR,
+  CLEAR_CART,
+  ADD_RECENT_ORDER
 } from './action';
 
 const initialState = {
@@ -40,6 +42,7 @@ const initialState = {
   paymentMethods: [],
   paymentMethod: null,
   selectedAvatar: null,
+  recentOrders: [],
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -100,94 +103,97 @@ const reducer = (state = initialState, action: any) => {
         isLogin: null,
         error: action.error,
       };
-    case ADD_TO_CART_REQUEST:
-      return {
-        ...state,
-        loading: true,
-      };
-    case ADD_TO_CART_SUCCESS:
-      let myindex = -1;
-      state.cartItems.map((item, index) => {
-        if (
-          item.id === action.payload.item.id
-
-        ) {
-          myindex = index;
-        }
-      });
-      if (myindex == -1) {
-        state.cartItems.push({
-          id: action.payload.item.id,
-          image: action.payload.item.image,
-          title: action.payload.item.title,
-          price: action.payload.item.price,
-          description: action.payload.item.description,
-          qty: action.payload.item.qty + 1,
+      case ADD_TO_CART_REQUEST:
+        return {
+          ...state,
+          loading: true,
+        };
+      case ADD_TO_CART_SUCCESS:
+        let myindex = -1;
+        state.cartItems.map((item, index) => {
+          if (
+            item.id === action.payload.item.id &&
+            item.userId === action.payload.userId
+          ) {
+            myindex = index;
+          }
         });
-      } else {
-        state.cartItems[myindex].qty = state.cartItems[myindex].qty + 1;
-      }
-      return {
-        ...state,
-        loading: false,
-        cartItems: [...state.cartItems],
-      };
-    case ADD_TO_CART_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.error,
-      };
-    case REMOVE_FROM_CART_REQUEST:
-      return {
-        ...state,
-        loading: true,
-      };
-    case REMOVE_FROM_CART_SUCCESS:
-      let startingIndex = -1;
-      state.cartItems.map((item, index) => {
-        if (
-          item.id === action.payload.item.id
-        ) {
-          startingIndex = index;
+        if (myindex == -1) {
+          state.cartItems.push({
+            userId: action.payload.userId,
+            id: action.payload.item.id,
+            image: action.payload.item.image,
+            title: action.payload.item.title,
+            price: action.payload.item.price,
+            description: action.payload.item.description,
+            qty: action.payload.item.qty + 1,
+          });
+        } else {
+          state.cartItems[myindex].qty = state.cartItems[myindex].qty + 1;
         }
-      });
-      if (startingIndex == -1) {
-      } else {
-        state.cartItems[startingIndex].qty =
-          state.cartItems[startingIndex].qty - 1;
-      }
-      return {
-        ...state,
-        loading: false,
-        cartItems: [...state.cartItems],
-      };
-    case REMOVE_FROM_CART_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.error,
-      };
-    case DELETE_CART_ITEM_REQUEST:
-      return {
-        ...state,
-        loading: true,
-      };
-    case DELETE_CART_ITEM_SUCCESS:
-      const updatedCartItems = state.cartItems.filter(
-        item =>
-          item.id !== action.payload.item.id
-      );
-      return {
-        ...state,
-        cartItems: updatedCartItems,
-      };
-    case DELETE_CART_ITEM_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.error,
-      };
+        return {
+          ...state,
+          loading: false,
+          cartItems: [...state.cartItems],
+        };
+      case ADD_TO_CART_FAILURE:
+        return {
+          ...state,
+          loading: false,
+          error: action.error,
+        };
+      case REMOVE_FROM_CART_REQUEST:
+        return {
+          ...state,
+          loading: true,
+        };
+      case REMOVE_FROM_CART_SUCCESS:
+        let startingIndex = -1;
+        state.cartItems.map((item, index) => {
+          if (
+            item.id === action.payload.item.id &&
+            item.userId === action.payload.userId
+          ) {
+            startingIndex = index;
+          }
+        });
+        if (startingIndex == -1) {
+        } else {
+          state.cartItems[startingIndex].qty =
+            state.cartItems[startingIndex].qty - 1;
+        }
+        return {
+          ...state,
+          loading: false,
+          cartItems: [...state.cartItems],
+        };
+      case REMOVE_FROM_CART_FAILURE:
+        return {
+          ...state,
+          loading: false,
+          error: action.error,
+        };
+      case DELETE_CART_ITEM_REQUEST:
+        return {
+          ...state,
+          loading: true,
+        };
+      case DELETE_CART_ITEM_SUCCESS:
+        const updatedCartItems = state.cartItems.filter(
+          item =>
+            item.id !== action.payload.item.id &&
+            item.userId === action.payload.userId,
+        );
+        return {
+          ...state,
+          cartItems: updatedCartItems,
+        };
+      case DELETE_CART_ITEM_FAILURE:
+        return {
+          ...state,
+          loading: false,
+          error: action.error,
+        };
     case PAYMENT_REQUEST:
       return {
         ...state,
@@ -225,6 +231,17 @@ const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         selectedAvatar: null,
+      };
+    case CLEAR_CART:
+      return {
+        ...state,
+        cartItems: []
+      };
+    case ADD_RECENT_ORDER:
+      const updatedRecentOrders = [action.payload, ...state.recentOrders].slice(0, 10); // Keep only the 10 most recent orders
+      return {
+        ...state,
+        recentOrders: updatedRecentOrders
       };
     default:
       return state;

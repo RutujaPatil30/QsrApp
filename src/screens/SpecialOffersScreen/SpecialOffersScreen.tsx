@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FlatList, TextInput, View} from 'react-native';
 import {IconButton} from 'react-native-paper';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CustomProductOffers from '../../components/CustomProductOffers/CustomProductsOffers';
 import { add_to_cart_request } from '../../redux/action';
 import baselocalization from '../../utils/baselocalization';
@@ -14,10 +14,11 @@ const SpecialOffersScreen= (props:any) => {
   const dispatch = useDispatch();
   const { navigation } = props;
   const [filteredOffer, setFilteredOffer] = useState(SpecialOfferPageData);
+  const userId = useSelector((state: any) => state.reducer.currentUser.id);
   const [searchQuery, setSearchQuery] = useState('');
 
   const addItems = (item: any) => {
-    dispatch(add_to_cart_request(item));
+    dispatch(add_to_cart_request(userId, item));
   };
 
   const onPressAdd = (item :any) => {

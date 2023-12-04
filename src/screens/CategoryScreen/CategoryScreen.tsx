@@ -10,10 +10,10 @@ const CategoryScreen = (props: any) => {
   const {navigation, route} = props;
 
   const dispatch = useDispatch();
+  const userId = useSelector((state: any) => state.reducer.currentUser.id);
   const cartItems = useSelector((state: any) => state.reducer.cartItems);
   const AddItems = (item: any) => {
-    dispatch(add_to_cart_request(item));
-    navigation.navigate('CartScreen')
+    dispatch(add_to_cart_request(userId, item));
   };
 
   return (

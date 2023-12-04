@@ -6,15 +6,18 @@ import baselocalization from "../../utils/baselocalization";
 import theme from "../../utils/themes";
 import styles from "./styles";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { images } from "../../utils/images";
 import RazorpayCheckout from 'react-native-razorpay';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { addRecentOrder, clearCart } from "../../redux/action";
 
 const CartScreen = (props: any) => {
     const { navigation } = props;
+    const dispatch = useDispatch();
     const cartItems = useSelector((state: any) => state.reducer.cartItems);
     const userDetails = useSelector((state: any) => state.reducer.currentUser);
+    const userId = useSelector((state: any) => state.reducer.currentUser.id);
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
     const [isEmpty, setIsEmpty] = useState(true);
@@ -61,7 +64,17 @@ const CartScreen = (props: any) => {
         RazorpayCheckout.open(options)
             .then(data => {
                 alert(`Success: Payment Successful`);
-                // setIsEmpty(true);
+                const orderDetails = {
+                    items: cartItems.map(item => ({
+                        name: item.title, // Ensure 'title' is the correct field for the product name
+                        price: item.price,
+                        qty: item.qty
+                    })),
+                    totalPrice: totalPrice
+                };
+                dispatch(addRecentOrder(orderDetails));
+                
+                dispatch(clearCart()); 
             })
             .catch(error => {
                 alert(`Error: ${error.code} | ${error.description}`);

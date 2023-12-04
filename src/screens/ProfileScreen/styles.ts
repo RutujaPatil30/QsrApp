@@ -92,7 +92,9 @@ const styles = StyleSheet.create({
         margin: hp('1%'),
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.colors.primary,
+        backgroundColor: theme.colors.lightGrey,
+        borderWidth:1.5,
+        borderColor:theme.colors.black,
         borderRadius: hp('9%'),
     },
     avatarImage: {
@@ -105,13 +107,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     closeText: {
-        fontSize: theme.fonts.detailsLabel, 
+        fontSize: theme.fonts.buttonText, 
         color: theme.colors.white,
         fontWeight: 'bold',
         marginBottom: hp('25%'), 
     },
     defaultText:{
-        fontSize: theme.fonts.detailsLabel, 
+        fontSize: theme.fonts.buttonText, 
         color: theme.colors.white,
         fontWeight: 'bold',
         marginLeft:hp('5%')
@@ -130,6 +132,24 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         backgroundColor:theme.colors.primary
     },
+    ordersContainer:{
+        marginVertical:hp('1.5%'),
+        backgroundColor:theme.colors.lightGrey,
+        padding: hp('1.5%'),
+        borderRadius: hp('2%'),
+        width:wp('87%'),
+        alignSelf:'center',
+    },
+    orderItem:{
+        fontSize: theme.fonts.subtitle,
+        color: theme.colors.grey,
+    },
+    orderTotalLabel:{
+        fontSize: theme.fonts.subtitle,
+        color: theme.colors.grey,
+        fontWeight: '500',
+    }
+
 });
 
 

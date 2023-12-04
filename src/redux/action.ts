@@ -23,7 +23,8 @@ export const ADD_PAYMENT_METHOD = 'ADD_PAYMENT_METHOD';
 export const SET_PAYMENT_METHOD = "SET_PAYMENT_METHOD";
 export const SET_SELECTED_AVATAR = 'SET_SELECTED_AVATAR';
 export const CLEAR_SELECTED_AVATAR = "CLEAR_SELECTED_AVATAR";
-
+export const CLEAR_CART = 'CLEAR_CART';
+export const ADD_RECENT_ORDER = 'ADD_RECENT_ORDER';
 
 export const signup_request = (data: any) => ({
   type: SIGNUP_REQUEST,
@@ -69,14 +70,14 @@ export const logout_failure = (error: any) => ({
   payload: error,
 });
 
-export const add_to_cart_request = ( item: any) => ({
+export const add_to_cart_request = (userId: any, item: any) => ({
   type: ADD_TO_CART_REQUEST,
-  payload: {item},
+  payload: {userId, item},
 });
 
-export const add_to_cart_success = ( item: any) => ({
+export const add_to_cart_success = (userId: any, item: any) => ({
   type: ADD_TO_CART_SUCCESS,
-  payload: {item},
+  payload: {userId, item},
 });
 
 export const add_to_cart_failure = (error: any) => ({
@@ -84,14 +85,14 @@ export const add_to_cart_failure = (error: any) => ({
   payload: error,
 });
 
-export const remove_from_cart_request = (item: any) => ({
+export const remove_from_cart_request = (userId: any, item: any) => ({
   type: REMOVE_FROM_CART_REQUEST,
-  payload: { item},
+  payload: {userId, item},
 });
 
-export const remove_from_cart_success = ( item: any) => ({
+export const remove_from_cart_success = (userId: any, item: any) => ({
   type: REMOVE_FROM_CART_SUCCESS,
-  payload: { item},
+  payload: {userId, item},
 });
 
 export const remove_from_cart_failure = (error: any) => ({
@@ -99,14 +100,14 @@ export const remove_from_cart_failure = (error: any) => ({
   payload: error,
 });
 
-export const delete_cart_item_request = (item: any) => ({
+export const delete_cart_item_request = (userId: any, item: any) => ({
   type: DELETE_CART_ITEM_REQUEST,
-  payload: {item},
+  payload: {userId, item},
 });
 
-export const delete_cart_item_success = (item: any) => ({
+export const delete_cart_item_success = (userId: any, item: any) => ({
   type: DELETE_CART_ITEM_SUCCESS,
-  payload: {item},
+  payload: {userId, item},
 });
 
 export const delete_cart_item_failure = (error: any) => ({
@@ -146,4 +147,13 @@ export const setSelectedAvatar = (avatar : any) => ({
 
 export const clearSelectedAvatar = () => ({
   type: CLEAR_SELECTED_AVATAR,
+});
+
+export const clearCart = () => ({
+  type: CLEAR_CART,
+});
+
+export const addRecentOrder = (orderDetails: any) => ({
+  type: ADD_RECENT_ORDER,
+  payload: orderDetails,
 });

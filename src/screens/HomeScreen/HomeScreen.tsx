@@ -11,7 +11,7 @@ import theme from "../../utils/themes";
 import styles from "./styles";
 import CustomCategory from "../../components/CustomCategory/CustomCategory";
 import CustomProductOffers from "../../components/CustomProductOffers/CustomProductsOffers";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {add_to_cart_request} from '../../redux/action';
 
 
@@ -22,6 +22,7 @@ const HomeScreen = (props: any) => {
     const [search, setSearch] = useState('');
     const [onDropDownOpen, setDropDownOpen] = useState(false);
     const [filteredCategories, setFilteredCategories] = useState(category);
+    const userId = useSelector((state: any) => state.reducer.currentUser?.id);
     const { navigation } = props;
 
     const filterCategories = (query: any) => {
@@ -32,7 +33,7 @@ const HomeScreen = (props: any) => {
     };
 
     const addItems = (item: any) => {
-        dispatch(add_to_cart_request(item));
+      dispatch(add_to_cart_request(userId, item));
     };
 
     const onPressDropDownFocus = () => {
