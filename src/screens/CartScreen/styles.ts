@@ -57,10 +57,9 @@ const styles = StyleSheet.create({
         color: theme.colors.primary,
         fontSize: theme.fonts.detailsLabel,
         fontWeight: '500',
-        alignSelf:"center",
     },
     noRideContainer: {
-        flex: 1,
+        marginTop:hp('20%'),
         justifyContent: 'center',
         alignItems: 'center',
     },

@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import theme from "../../utils/themes";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-
 const styles = StyleSheet.create({
     container: {
         flexGrow: 1,
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
         borderColor: theme.colors.secondary,
     },
     titleStyles: {
-        flex:8,
+        flex: 8,
         padding: hp('2%'),
         fontSize: theme.fonts.title,
         fontWeight: 'bold',
@@ -39,17 +38,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: hp('13%'),
-        borderColor:theme.colors.primary,
-        borderWidth:1,
+        borderColor: theme.colors.primary,
+        borderWidth: 1,
     },
-    initialContainer:{
+    initialContainer: {
         height: hp('10%'),
         width: hp('10%'),
         marginTop: hp('3%'),
         alignSelf: 'center',
         padding: hp('1%'),
-        borderColor:theme.colors.primary,
-        borderWidth:1,
+        borderColor: theme.colors.primary,
+        borderWidth: 1,
         backgroundColor: theme.colors.lightGrey,
         alignItems: 'center',
         justifyContent: 'center',
@@ -81,20 +80,20 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     modalContainer: {
-        flex:1,
-        justifyContent:'center',
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
     },
     avatarItem: {
-        width: wp('18%'), 
-        height: hp('10%'), 
+        width: wp('18%'),
+        height: hp('10%'),
         margin: hp('1%'),
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: theme.colors.lightGrey,
-        borderWidth:1.5,
-        borderColor:theme.colors.black,
+        borderWidth: 1.5,
+        borderColor: theme.colors.black,
         borderRadius: hp('9%'),
     },
     avatarImage: {
@@ -102,53 +101,67 @@ const styles = StyleSheet.create({
         height: hp('7%'),
     },
     avatarText: {
-        fontSize: theme.fonts.title, 
+        fontSize: theme.fonts.title,
         color: theme.colors.primary,
         fontWeight: 'bold',
     },
     closeText: {
-        fontSize: theme.fonts.buttonText, 
+        fontSize: theme.fonts.buttonText,
         color: theme.colors.white,
         fontWeight: 'bold',
-        marginBottom: hp('25%'), 
+        marginBottom: hp('25%'),
     },
-    defaultText:{
-        fontSize: theme.fonts.buttonText, 
+    defaultText: {
+        fontSize: theme.fonts.buttonText,
         color: theme.colors.white,
         fontWeight: 'bold',
-        marginLeft:hp('5%')
+        marginLeft: hp('5%')
     },
-    recentTextStyles:{
+    recentTextStyles: {
         paddingLeft: hp('3.2%'),
-        color:theme.colors.primary,
-        fontSize:theme.fonts.authLabel,
-        fontWeight:'bold'
+        color: theme.colors.primary,
+        fontSize: theme.fonts.authLabel,
+        fontWeight: 'bold'
     },
-    iconContainer:{
-        alignSelf:'center',
-        flex:1
+    iconContainer: {
+        alignSelf: 'center',
+        flex: 1
     },
-    topContainer:{
-        flexDirection:'row',
-        backgroundColor:theme.colors.primary
+    topContainer: {
+        flexDirection: 'row',
+        backgroundColor: theme.colors.primary
     },
-    ordersContainer:{
-        marginVertical:hp('1.5%'),
-        backgroundColor:theme.colors.lightGrey,
+    ordersContainer: {
+        marginVertical: hp('1.5%'),
+        backgroundColor: theme.colors.lightGrey,
         padding: hp('1.5%'),
         borderRadius: hp('2%'),
-        width:wp('87%'),
-        alignSelf:'center',
+        width: wp('87%'),
+        alignSelf: 'center',
     },
-    orderItem:{
+    orderItem: {
         fontSize: theme.fonts.subtitle,
         color: theme.colors.grey,
     },
-    orderTotalLabel:{
+    orderTotalLabel: {
         fontSize: theme.fonts.subtitle,
         color: theme.colors.grey,
         fontWeight: '500',
-    }
+        textAlign: 'center',
+        borderTopWidth:1,
+        borderColor:theme.colors.grey
+    },
+    orderItemContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: hp('1%'), 
+    },
+    orderPrice: {
+        fontSize: theme.fonts.subtitle,
+        color: theme.colors.grey,
+        fontWeight: '500',
+    },
 
 });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { add_to_cart_request, delete_cart_item_request, remove_from_cart_request } from '../../redux/action';
 import theme from '../../utils/themes';
 import { styles } from './styles';
@@ -26,11 +26,12 @@ const CustomCartElement = ({
   testID
 }: CustomCartElementProps) => {
   const dispatch = useDispatch();
+  const userId = useSelector((state: any) => state.reducer.currentUser.id);
   const increaseItem = () => {
     const item = {
       id: itemId,
     };
-    dispatch(add_to_cart_request(item));
+    dispatch(add_to_cart_request(userId, item));
   };
 
 
@@ -39,9 +40,9 @@ const CustomCartElement = ({
       id: itemId,
     };
     if (itemQty > 1) {
-      dispatch(remove_from_cart_request(item));
+      dispatch(remove_from_cart_request(userId, item));
     } else {
-      dispatch(delete_cart_item_request(item));
+      dispatch(delete_cart_item_request(userId, item));
     }
   };
 
@@ -49,7 +50,7 @@ const CustomCartElement = ({
     const item = {
       id: itemId,
     };
-    dispatch(delete_cart_item_request( item));
+    dispatch(delete_cart_item_request(userId, item));
   };
   return (
     <View style={styles.container} testID = {testID ?? 'CustomCartElement'}>

@@ -14,6 +14,7 @@ const CategoryScreen = (props: any) => {
   const cartItems = useSelector((state: any) => state.reducer.cartItems);
   const AddItems = (item: any) => {
     dispatch(add_to_cart_request(userId, item));
+    navigation.navigate('CartScreen');
   };
 
   return (

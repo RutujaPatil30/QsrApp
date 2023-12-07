@@ -85,7 +85,7 @@ const CartScreen = (props: any) => {
         <View>
             <View style={styles.topView}>
                 <Text style={styles.pageTitle}>{baselocalization.cartScreen.cartScreenTitle}</Text>
-                <TouchableOpacity onPress={()=>{navigation.navigate('ProfileScreen')}}>
+                <TouchableOpacity onPress={()=>{navigation.navigate('ProfileScreen')}} >
                     <Icon name="account-circle" size={35} color={theme.colors.primary} style={{ marginLeft: wp('55%') }} />
                 </TouchableOpacity>
             </View>
@@ -157,6 +157,9 @@ const CartScreen = (props: any) => {
                 <Text style={styles.TextContainer}>
                     {baselocalization.cartScreen.cartScreennoItem}
                 </Text>
+                <TouchableOpacity onPress={()=>{navigation.navigate('ProfileScreen')}}  >
+                    <Icon name="account-circle" size={35} color={theme.colors.primary} style={{ marginLeft: wp('32%') }} />
+                </TouchableOpacity>
             </View>
             <View style={styles.noRideContainer}>
                 <>

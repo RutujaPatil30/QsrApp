@@ -21,15 +21,18 @@ const ProfileScreen = (props: any) => {
 
     const renderOrder = ({ item }) => (
         <View style={styles.ordersContainer}>
-            {item.items.map((product : any, index : any) => (
-                <Text style = {styles.orderItem} key={index}>
-                    {product.name} - {product.price} x {product.qty}
+          {item.items.map((product, index) => (
+            <View style={styles.orderItemContainer} key={index}>
+                <Text style={styles.orderItem}>
+                  {product.name} - {product.qty}
                 </Text>
-            ))}
-            <Text style = {styles.orderTotalLabel}>Order Total: {item.totalPrice}</Text>
+                <Text style={styles.orderPrice}>{product.price}</Text>
+            </View>
+          ))}
+          <Text style={styles.orderTotalLabel}>Order Total: {item.totalPrice}</Text>
         </View>
-        
-    );
+      );
+      
     const toggleAvatarModal = () => {
         setAvatarModalVisible(!isAvatarModalVisible);
     };
@@ -111,13 +114,11 @@ const ProfileScreen = (props: any) => {
                 </View>
             </View>
             <Text style={styles.recentTextStyles}>Recent Orders</Text>
-            {/* <View style={styles.ordersContainer}> */}
                 <FlatList
                     data={recentOrders}
                     renderItem={renderOrder}
                     keyExtractor={(item, index) => index.toString()} 
                 />
-            {/* </View> */}
         </ScrollView>
     )
 }
