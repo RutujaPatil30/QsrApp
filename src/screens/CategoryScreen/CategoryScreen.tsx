@@ -5,6 +5,7 @@ import CustomCategoryElements from '../../components/CustomCategoryElements/Cust
 import {add_to_cart_request} from '../../redux/action'
 import {styles} from './styles';
 import ProductDetails from '../../utils/productDetails'
+import { SafeAreaView } from 'react-native';
 
 const CategoryScreen = (props: any) => {
   const {navigation, route} = props;
@@ -18,7 +19,7 @@ const CategoryScreen = (props: any) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         //@ts-ignore
         data={ProductDetails[route?.params?.title]}
@@ -47,7 +48,7 @@ const CategoryScreen = (props: any) => {
         )}
         showsVerticalScrollIndicator={false}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

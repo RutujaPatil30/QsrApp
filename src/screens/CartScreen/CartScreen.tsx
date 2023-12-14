@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, Image, TouchableOpacity, SafeAreaView } from "react-native";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomCartElement from "../../components/CustomCartElement/CustomCartElement";
 import baselocalization from "../../utils/baselocalization";
@@ -82,7 +82,7 @@ const CartScreen = (props: any) => {
     }
 
     return !isEmpty ? (
-        <View>
+        <SafeAreaView>
             <View style={styles.topView}>
                 <Text style={styles.pageTitle}>{baselocalization.cartScreen.cartScreenTitle}</Text>
                 <TouchableOpacity onPress={()=>{navigation.navigate('ProfileScreen')}} >
@@ -150,9 +150,9 @@ const CartScreen = (props: any) => {
                     onPress={() => { navigation.navigate("CardScreen") }}
                 />
             </View>
-        </View>
+        </SafeAreaView>
     ) : (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.topView}>
                 <Text style={styles.TextContainer}>
                     {baselocalization.cartScreen.cartScreennoItem}
@@ -166,7 +166,7 @@ const CartScreen = (props: any) => {
                     <Image source={images.cartScreen_emptyCart} style={styles.noRideImage} />
                 </>
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 

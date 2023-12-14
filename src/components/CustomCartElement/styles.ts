@@ -49,7 +49,6 @@ export const styles = StyleSheet.create({
     color: theme.colors.black,
   },
   priceContainer: {
-    width: wp('15%'),
     marginRight:wp('2%'),
   },
   textPrice: {

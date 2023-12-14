@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Button } from 'react-native';
+import { View, Button, SafeAreaView } from 'react-native';
 import { useDispatch } from 'react-redux';
 import CustomTextInput from '../../components/CustomTextInput/CustomTextInput';
 import CustomButton from '../../components/CustomButton/CustomButton';
@@ -21,7 +21,7 @@ const AddPaymentScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <CustomTextInput
         labelText="Card Details"
         lablePlaceHolder="Enter card number"
@@ -46,7 +46,7 @@ const AddPaymentScreen = ({ navigation }) => {
       />
       </View>
       
-    </View>
+    </SafeAreaView>
   );
 };
 

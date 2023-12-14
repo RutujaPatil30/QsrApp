@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { add_to_cart_request, delete_cart_item_request, remove_from_cart_request } from '../../redux/action';
 import theme from '../../utils/themes';
 import { styles } from './styles';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 
@@ -72,7 +73,7 @@ const CustomCartElement = ({
       <View style={styles.priceContainer}>
         <TouchableOpacity
           testID='DeleteButton'
-          style={{alignItems: 'flex-end', marginBottom: 20}}
+          style={{alignItems: 'flex-end', marginBottom: wp('5%')}}
           onPress={deleteItem}>
           <Icon
             name="trash-can-outline"
@@ -81,7 +82,7 @@ const CustomCartElement = ({
           />
         </TouchableOpacity>
         <View style={{alignSelf: 'center'}}>
-          <Text style={styles.textPrice}>Rs. {itemPrice}</Text>
+          <Text style={styles.textPrice}>Rs.{itemPrice}</Text>
         </View>
       </View>
     </View>

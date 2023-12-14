@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FlatList, TextInput, View} from 'react-native';
+import {FlatList, SafeAreaView, TextInput, View} from 'react-native';
 import {IconButton} from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
 import CustomProductOffers from '../../components/CustomProductOffers/CustomProductsOffers';
@@ -34,7 +34,7 @@ const SpecialOffersScreen= (props:any) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}
@@ -64,7 +64,7 @@ const SpecialOffersScreen= (props:any) => {
         )}
         showsVerticalScrollIndicator={false}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

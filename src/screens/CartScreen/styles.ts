@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     scrollViewStyle: {
         flexGrow:1,
         position: 'absolute',
-        top: hp('4%'),
+        top: hp('6%'),
         height: hp('100%'),
         padding: hp('2%'),
         borderRadius: wp('5%'),

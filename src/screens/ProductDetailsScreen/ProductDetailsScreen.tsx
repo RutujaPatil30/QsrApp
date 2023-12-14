@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import { Text, TextInput, TouchableOpacity } from "react-native";
+import { SafeAreaView, Text, TextInput, TouchableOpacity } from "react-native";
 import { Image, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import * as Animatable from 'react-native-animatable';
@@ -27,7 +27,7 @@ const ProductDetailsScreen = (props: any) => {
     };
     
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Animatable.View animation="fadeIn" style={{ flex: 1 }}>
                 <View style={styles.detailsContainer}>
                     <ScrollView style = {styles.bottomContainer}>
@@ -74,7 +74,7 @@ const ProductDetailsScreen = (props: any) => {
                     <Image source={route.params.image} style={styles.imageStyles} />
                 </Animatable.View>
             </Animatable.View>
-        </View>
+        </SafeAreaView>
     )
 }
 

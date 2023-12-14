@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, Text, View, Image, FlatList, TouchableOpacity } from "react-native";
+import { ScrollView, Text, View, Image, FlatList, TouchableOpacity, SafeAreaView } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
 import { Searchbar } from "react-native-paper";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -51,6 +51,7 @@ const HomeScreen = (props: any) => {
     }
 
     return (
+        <SafeAreaView>
         <ScrollView contentContainerStyle={{ flexGrow: 1, opacity: onDropDownOpen ? 0.2 : 1 }}>
             <View style={styles.topView}>
                 <View style={styles.container}>
@@ -171,6 +172,7 @@ const HomeScreen = (props: any) => {
             </View>
 
         </ScrollView>
+        </SafeAreaView>
     )
 }
 

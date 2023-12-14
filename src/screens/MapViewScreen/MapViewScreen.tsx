@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import MapView, { Region, Marker } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
-import { ActivityIndicator, Platform, View, Text, TouchableOpacity, Modal } from 'react-native';
+import { ActivityIndicator, Platform, View, Text, TouchableOpacity, Modal, SafeAreaView } from 'react-native';
 import { request, PERMISSIONS, PermissionStatus } from 'react-native-permissions';
 import styles from './styles';
 import Stores from '../../utils/storeGeo';
@@ -73,7 +73,7 @@ const MapViewScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity style={styles.fab} onPress={handleFabPress}>
         <Icon name="store" size={35} color={theme.colors.primary} />
       </TouchableOpacity>
@@ -129,7 +129,7 @@ const MapViewScreen = () => {
             ))}
         </MapView>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 
